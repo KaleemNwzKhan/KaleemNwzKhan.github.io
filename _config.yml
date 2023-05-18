@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Kaleem Nawaz Khan / Kaleem Nawaz Khan"
+title                    : "Kaleem Nawaz Khan"
 title_separator          : "-"
 name                     : &name "Kaleem Nawaz Khan"
 description              : &description "personal description"
@@ -80,15 +80,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
+  name             : "Kaleem Nawaz Khan"
   avatar           : "profile.jpg"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
+  bio              : "A self-motivated and confident CS-graduate. Graduate Research Assistant at RIT NY, US"
+  location         : "One Lomb Memorial Drive, Rochester, NY 14623 585-475-2411"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  pubmed           : #""
+  googlescholar    : "https://scholar.google.com/citations?user=nQYFXdgAAAAJ&hl=en&oi=ao"
+  email            : "kk5271@rit.edu"
+  researchgate     : "https://www.researchgate.net/profile/Kaleem-Khan-5"
   uri              :
   bitbucket        :
   codepen          :
@@ -96,14 +96,14 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : "https://github.com/KaleemNwzKhan"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  linkedin         : "https://www.linkedin.com/in/kaleemnawazkhan6161"
+  orcid            : "https://orcid.org/0000-0003-3630-6418"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
