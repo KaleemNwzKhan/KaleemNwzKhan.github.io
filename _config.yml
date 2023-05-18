@@ -190,7 +190,7 @@ collections:
 
 
 # Defaults
-defaults:
+# defaults:
   # _posts
   - scope:
       path: ""
