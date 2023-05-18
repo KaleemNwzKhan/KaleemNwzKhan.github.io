@@ -8,4 +8,3 @@ collection: publications
 paperurl: 'https://doi.org/10.1109/ICAI52203.2021.9445263'
 #citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
-[Download paper here](https://doi.org/10.1109/ICAI52203.2021.9445263)
