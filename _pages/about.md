@@ -7,9 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-Kaleem Nawaz Khan is a Ph.D. student and Graduate Research Assistant in the Department of Computer Science at [GCCIS](href="https://www.rit.edu/computing/") Golisano College of Computing and Information Sciences, New York, USA. My research focus is Digital Twins; Autonoums Driving and 3D Sensing. Specifically, I am working on edge-assisted autonoums driving to enhance the autonoums vehicle's perception range. The objective is to leverage the information from the road-side installed infrastructure and vehicle sensors and then find an accurate regiration process to fuse infrastructure-vehicle perception.
+Kaleem Nawaz Khan is a doctoral candidate and serves as a Graduate Research Assistant in the Department of Computer Science at the Golisano College of Computing and Information Sciences [GCCIS](href="https://www.rit.edu/computing/"), located in New York, USA.
+My research primarily revolves around Digital Twins, Autonomous Driving, and 3D Sensing. More specifically, my work is centered on edge-assisted autonomous driving systems aimed at augmenting the perception range of autonomous vehicles. The key objective is to utilize data from both road-side installed infrastructure and vehicle sensors, and subsequently develop a robust registration process for effectively merging the perception inputs from the infrastructure and the vehicle.
 
-I received BS and M.S degrees with distinctions in computer science from [NUCES](href="https://www.nu.edu.pk/") National University of Computer and Emerging Sciences, Peshawar, Pakistan in 2015 and 2018, respectively. I served as a Research Team Lead in the Intelligent Information Processing Lab at [NCAI]("https://ncai.nust.edu.pk/NCAI") Peshawar (2019-2021).
+I graduated with honors from the National University of Computer and Emerging Sciences [NUCES](href="https://www.nu.edu.pk/"), Peshawar, Pakistan, where I obtained both my Bachelor of Science (BS) and Master of Science (M.S.) degrees in computer science in 2015 and 2018, respectively. Following my academic achievements, I assumed the role of Research Team Lead at the Intelligent Information Processing Lab housed within the National Center for Artificial Intelligence [NCAI]("https://ncai.nust.edu.pk/NCAI") in Peshawar, Pakistan, from 2019 to 2021.
+
 
 
 
