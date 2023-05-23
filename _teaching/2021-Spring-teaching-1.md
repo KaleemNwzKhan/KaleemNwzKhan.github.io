@@ -3,7 +3,7 @@ title: "Lecturer"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2014-spring-teaching-1
-venue: "Department of Computer Science, University of Engineering and Technology"
+venue: "Department of Computer Science, University of Engineering and Technology Mardan, Pakistan"
 date: 2021-01-21
 location: "Mardan, Pakistan"
 ---
