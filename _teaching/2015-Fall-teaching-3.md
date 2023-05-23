@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2015-Fall-teaching-3
 venue: "Department of Computer Science, National University of Computer and Emerging Sciences, Peshawar, Pakistan"
-date: 2021-07-27
+date: 2015-07-27
 location: "Peshawar, Pakistan"
 ---
 
