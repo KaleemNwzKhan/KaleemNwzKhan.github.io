@@ -1,20 +1,11 @@
 ---
-title: "Teaching experience 1"
+title: "Lecturer"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
-date: 2014-01-01
-location: "City, Country"
+venue: "Department of Computer Science, University of Engineering and Technology"
+date: 2021-01-21
+location: "Mardan, Pakistan"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
-
-Heading 1
-======
-
-Heading 2
-======
-
-Heading 3
-======
+To teach to the students of computer science program. I teach courses such as Artificial Intelligence, Mobile Application Development and Design & Analysis of Algorithms. I am also serving as career liaison officer (CLO) to guide students towards their career related decisions and conduct different workshops/seminars for the professional skills development.
