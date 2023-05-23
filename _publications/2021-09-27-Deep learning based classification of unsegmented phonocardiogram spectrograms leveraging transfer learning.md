@@ -1,10 +1,10 @@
 ---
-title: "OP2VEC: an opcode embedding technique and dataset design for end-to-end detection of android malware"
+title: "Deep learning based classification of unsegmented phonocardiogram spectrograms leveraging transfer learning"
 collection: publications
 #permalink: /publication/2009-10-01-paper-title-number-1
 #excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2021-04-10
+date: 2021-09-27
 #venue: 'Journal 1'
-paperurl: 'https://doi.org/10.1155/2022/3710968'
+paperurl: 'https://doi.org/10.1088/1361-6579/ac1d59'
 #citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
