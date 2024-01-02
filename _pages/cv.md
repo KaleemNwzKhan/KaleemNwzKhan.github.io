@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-Download PDF: (<a href="https://www.rit.edu/"> https://www.rit.edu/ </a>)
+Download : (<a href="https://drive.google.com/file/d/1P64DWyVsAExhTiVqnvQBm5dkd2ZrywYU/view?usp=sharing/"> CV PDF </a>)
 
 Education
 ======
