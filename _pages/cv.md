@@ -33,15 +33,15 @@ Work experience
 
 Academic Projects
 ======
-* RAPID: Accurate, Real-time, Overlap-agnostic Road-side Vehicle Point Cloud Fusion	 (Aug 2022 to Aug 2023)
+* <b> RAPID: Accurate, Real-time, Overlap-agnostic Road-side Vehicle Point Cloud Fusion	 (Aug 2022 to Aug 2023)</b>
   * Alignment of vehicle and RSU point clouds via 3D map for accuracy.
   * Innovative offline registration and alignment forecasting modules.
   * Fusion pipeline with caching for reduced latency, achieving 1-2 cm accuracy in 20 ms and up to 5-second faster reaction to external events in real-world tests.
-* Human fall detection and human postures classification using deep learning	(Apr 2019 to Aug 2020)
+* <b> Human fall detection and human postures classification using deep learning	(Apr 2019 to Aug 2020) </b> 
   * Computer vision system for fall detection using a monocular camera for independent living of older adults.
   * Utilizes mask R-CNN to detect human silhouettes from video data and CNN to classify postures and detect falls (lying posture on the ground).
   * Compared with other ML algorithms (SVM, RF, k-means, ANN) and demonstrated stable performance.
-* Deep learning based classification of unsegmented PCGs spectrograms leveraging transfer learning  (Sep 2020 to Mar 2021)
+* <b> Deep learning based classification of unsegmented PCGs spectrograms leveraging transfer learning  (Sep 2020 to Mar 2021) </b> 
   * Use of short-time Fourier transform-based spectrograms to analyze normal and abnormal PCG signals.
   * Four studies conducted, including CNN model training and testing on different datasets, achieving high accuracy, sensitivity, specificity, precision, and F1 scores.
   * Notable results include 95.75% accuracy in the first study, 75.25% accuracy in the second study, 92.7% accuracy in the third study, and a 96.98% precision in the fourth study using transfer learning on noisy data.
