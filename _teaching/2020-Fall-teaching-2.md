@@ -8,4 +8,4 @@ date: 2020-09-14
 location: "Islamabad, Pakistan"
 ---
 
-The role was to teach computer science core courses such as operating systems and elective courses such as mobile application development (Android). I also supervised three groups of final year project.
+My role involved teaching computer science core courses, including operating systems, and elective courses in mobile application development (Android). Additionally, I supervised three groups of students in their final-year projects, providing guidance and mentorship for their research and development initiatives. Balancing both responsibilities, I facilitated students' academic and professional growth by bridging fundamental computer science principles with specialized development expertise.
