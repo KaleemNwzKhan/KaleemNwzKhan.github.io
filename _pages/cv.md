@@ -13,30 +13,35 @@ Education
 ======
 * B.S. in Computer Science, National University of Computer and Emerging Sciences, Pakistan, 2015
 * M.S. in Computer Science, National University of Computer and Emerging Sciences, Pakistan, 2018
-* Ph.D in Computing and Information Sciences, Rochester Institute of Technology (RIT), 2027 (expected)
+* Ph.D in Computing and Information Sciences, Rochester Institute of Technology (RIT), New York, USA 2027 (expected)
 
 Work experience
 ======
 * Graduate Research Assistant (Aug 2022 to Present)        
-  * Mobile Systems Lab, RIT (https://www.rit.edu/)
+  * Mobile Systems Lab, RIT, New York, USA (<a href="https://www.rit.edu/"> https://www.rit.edu/ </a>)
   * Job Details 
     * Conduct research and development to enhance LiDAR-based autonomous driving perception with edge-assisted solutions.
     * Leverage ROS, FASTLIO, PCL, and Open3D technologies to efficiently process LiDAR data and develop a real-time system tailored for autonomous vehicles.
     * Author research articles and experimental reports for esteemed autonomous vehicle conferences such as Mobicom and MobiSys.
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Project Team Lead (Apr 2019 to Sep 2020)        
+  * National Center of Artificial Intelligence, Peshawar, Pakistan (<a href="https://ncai.pk/)"> https://ncai.pk/ </a>)
+  * Job Details 
+    * Led a diverse team of researchers and developers in extensive research and development (R&D) endeavors, focused on creating innovative, domestically developed artificial intelligence (AI) solutions for the healthcare industry.
+    * Utilizes deep learning techniques to assist practitioners and medical doctors in conducting cardiology and hematology investigations.
+    * Co-authored and published three impactful research articles on machine learning-based solutions for diverse health complications and abnormalities.
+
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Languages
+  * Python, C++, Java, SQL, HTML, PHP.
+* Libraries
+  * PCL, Open3D, OpenCV , Numpy, Pandas, Matplotlib,  Keras,  Tensorflow, Docker. 
+* Tools
+  * SLAM, FASTLIO, ROS, Cloud Compare, REST, Databases, Trello.
+* Areas of Interest
+  * 3D Modeling, 3D Sensing and Reconstruction, Autonomous Systems, Machine Learning.
 
 Publications
 ======
@@ -55,7 +60,3 @@ Teaching
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
