@@ -36,15 +36,15 @@ Work experience
 Academic Projects
 ======
 * <b> Neural Radiance Field (NeRF) based mapping and tracking for robots				               (Jan 2024 - Present) </b> 
-* Explore NeRF-based real-time, scalable, predictive, and robust mapping and tracking methods for robots 
-* Develop solutions to fix limitations in the existing visual-SLAM solutions
-* Collect large datasets from the real world to test the effectiveness of our proposed solutions.
+  * Explore NeRF-based real-time, scalable, predictive, and robust mapping and tracking methods for robots 
+  * Develop solutions to fix limitations in the existing visual-SLAM solutions
+  * Collect large datasets from the real world to test the effectiveness of our proposed solutions.
 * <b> VRF: Vehicle Road-side Point Cloud Fusion		        	          				           (Sep 2022 - Mar 2024) </b>
-* Autonomous vehicles and human drivers face line-of-sight limitations. Road-side 3D sensors like LiDARs can enhance vehicle perception but require low-latency and high-accuracy 3D frame fusion.
-* VRF tackles alignment challenges by employing indirect and direct alignment processes for roadside and vehicle 3D frames, ensuring accuracy.
-* VRF introduces novel offline registration, alignment accuracy forecasting modules, and a unique fusion pipeline for low-latency 3D frame fusion, caching previous computations.
-* VRF is a pioneering roadside cooperative system, achieving cm-level accuracy with less than 20 ms end-to-end latency—below the critical 100 ms threshold for autonomous vehicles.
-* VRF enhances reaction time to external events by up to 5 seconds, marking a noteworthy advancement in the field of autonomous vehicle technology.
+  * Autonomous vehicles and human drivers face line-of-sight limitations. Road-side 3D sensors like LiDARs can enhance vehicle perception but require low-latency and high-accuracy 3D frame fusion.
+  * VRF tackles alignment challenges by employing indirect and direct alignment processes for roadside and vehicle 3D frames, ensuring accuracy.
+  * VRF introduces novel offline registration, alignment accuracy forecasting modules, and a unique fusion pipeline for low-latency 3D frame fusion, caching previous computations.
+  * VRF is a pioneering roadside cooperative system, achieving cm-level accuracy with less than 20 ms end-to-end latency—below the critical 100 ms threshold for autonomous vehicles.
+  * VRF enhances reaction time to external events by up to 5 seconds, marking a noteworthy advancement in the field of autonomous vehicle technology.
 * <b> Human fall detection and human postures classification using deep learning	(Apr 2019 to Aug 2020) </b> 
   * Computer vision system for fall detection using a monocular camera for independent living of older adults.
   * Utilizes mask R-CNN to detect human silhouettes from video data and CNN to classify postures and detect falls (lying posture on the ground).
