@@ -299,6 +299,11 @@ sass:
 # Jekyll Scholar
 # -----------------------------------------------------------------------------
 
+assets:
+  js_compressor: uglifier
+  uglifier:
+    harmony: true
+
 scholar:
   last_name: [Einstein]
   first_name: [Albert, A.]
