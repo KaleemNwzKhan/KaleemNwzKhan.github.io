@@ -272,10 +272,10 @@ sass:
 # Jekyll Minifier
 # -----------------------------------------------------------------------------
 
-# jekyll-minifier:
-#   exclude: ["robots.txt", "assets/js/search/*.js"]
-#   uglifier_args:
-#     harmony: true
+jekyll-minifier:
+  exclude: ["robots.txt", "assets/js/search/*.js"]
+  uglifier_args:
+    harmony: true
 
 # -----------------------------------------------------------------------------
 # Jekyll Archives
@@ -299,10 +299,10 @@ sass:
 # Jekyll Scholar
 # -----------------------------------------------------------------------------
 
-assets:
-  js_compressor: uglifier
-  uglifier:
-    harmony: true
+# assets:
+#   js_compressor: uglifier
+#   uglifier:
+#     harmony: true
 
 scholar:
   last_name: [Einstein]

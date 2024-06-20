@@ -19,7 +19,9 @@
 
   var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   var months = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
-  var zeroPad = (n) => (n < 10 ? "0" + n : n);
+  var zeroPad = function(n) {
+    return n < 10 ? "0" + n : n;
+  };
 
   var RFC = function (date) {
     var day = days[date.getDay()].substring(0, 3);
