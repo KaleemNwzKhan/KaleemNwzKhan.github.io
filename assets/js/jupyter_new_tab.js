@@ -1,10 +1,10 @@
 $(document).ready(function () {
   // Let external links in jupyter notebooks open in new tab
-  let jupyterNotebooks = $(".jupyter-notebook-iframe-container");
+  var jupyterNotebooks = $(".jupyter-notebook-iframe-container");
   jupyterNotebooks.each(function () {
-    let iframeBody = $(this).find("iframe").get(0).contentWindow.document.body;
+    var iframeBody = $(this).find("iframe").get(0).contentWindow.document.body;
     // Get all <a> elements in the bodyElement
-    let links = $(iframeBody).find("a");
+    var links = $(iframeBody).find("a");
 
     // Loop through each <a> element
     links.each(function () {

@@ -47,7 +47,7 @@ codeBlocks.forEach(function (codeBlock) {
     wrapper.className = "code-display-wrapper";
 
     // add copy button and code block to wrapper div
-    const parent = codeBlock.parentElement;
+    var parent = codeBlock.parentElement;
     parent.insertBefore(wrapper, codeBlock);
     wrapper.append(codeBlock);
     wrapper.append(copyButton);
