@@ -17,31 +17,31 @@
   // See the License for the specific language governing permissions and
   // limitations under the License.
 
-  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  const months = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
-  const zeroPad = (n) => (n < 10 ? "0" + n : n);
+  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var months = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
+  var zeroPad = (n) => (n < 10 ? "0" + n : n);
 
-  const RFC = function (date) {
-    const day = days[date.getDay()].substring(0, 3);
-    const paddedDate = zeroPad(date.getDate());
-    const month = months[date.getMonth()].substring(0, 3);
-    const year = date.getFullYear().toString();
-    const hours = date.getUTCHours().toString();
-    const minutes = date.getUTCMinutes().toString();
-    const seconds = date.getUTCSeconds().toString();
+  var RFC = function (date) {
+    var day = days[date.getDay()].substring(0, 3);
+    var paddedDate = zeroPad(date.getDate());
+    var month = months[date.getMonth()].substring(0, 3);
+    var year = date.getFullYear().toString();
+    var hours = date.getUTCHours().toString();
+    var minutes = date.getUTCMinutes().toString();
+    var seconds = date.getUTCSeconds().toString();
     return `${day}, ${paddedDate} ${month} ${year} ${hours}:${minutes}:${seconds} Z`;
   };
 
-  const objectFromMap = function (map) {
-    const object = Array.from(map).reduce(
+  var objectFromMap = function (map) {
+    var object = Array.from(map).reduce(
       (object, [key, value]) => Object.assign(object, { [key]: value }), // Be careful! Maps can have non-String keys; object literals can't.
       {}
     );
     return object;
   };
 
-  const mapFromObject = function (object) {
-    const map = new Map();
+  var mapFromObject = function (object) {
+    var map = new Map();
     for (var property in object) {
       if (object.hasOwnProperty(property)) {
         map.set(property, object[property]);
@@ -51,14 +51,14 @@
   };
 
   class Author {
-    // constructor(name='', personalURL='', affiliation='', affiliationURL='') {
+    // varructor(name='', personalURL='', affiliation='', affiliationURL='') {
     //   this.name = name; // 'Chris Olah'
     //   this.personalURL = personalURL; // 'https://colah.github.io'
     //   this.affiliation = affiliation; // 'Google Brain'
     //   this.affiliationURL = affiliationURL; // 'https://g.co/brain'
     // }
 
-    constructor(object) {
+    varructor(object) {
       this.name = object.author; // 'Chris Olah'
       this.personalURL = object.authorURL; // 'https://colah.github.io'
       this.affiliation = object.affiliation; // 'Google Brain'
@@ -68,13 +68,13 @@
 
     // 'Chris'
     get firstName() {
-      const names = this.name.split(" ");
+      var names = this.name.split(" ");
       return names.slice(0, names.length - 1).join(" ");
     }
 
     // 'Olah'
     get lastName() {
-      const names = this.name.split(" ");
+      var names = this.name.split(" ");
       return names[names.length - 1];
     }
   }
@@ -84,14 +84,14 @@
     if (source.published) {
       if (source.published instanceof Date) {
         target.publishedDate = source.published;
-      } else if (source.published.constructor === String) {
+      } else if (source.published.varructor === String) {
         target.publishedDate = new Date(source.published);
       }
     }
     if (source.publishedDate) {
       if (source.publishedDate instanceof Date) {
         target.publishedDate = source.publishedDate;
-      } else if (source.publishedDate.constructor === String) {
+      } else if (source.publishedDate.varructor === String) {
         target.publishedDate = new Date(source.publishedDate);
       } else {
         console.error("Don't know what to do with published date: " + source.publishedDate);
@@ -107,7 +107,7 @@
   }
 
   class FrontMatter {
-    constructor() {
+    varructor() {
       this.title = "unnamed article"; // 'Attention and Augmented Recurrent Neural Networks'
       this.description = ""; // 'A visual overview of neural attention...'
       this.authors = []; // Array of Author(s)
@@ -258,7 +258,7 @@
     }
 
     get volume() {
-      const volume = this.publishedYear - 2015;
+      var volume = this.publishedYear - 2015;
       if (volume < 1) {
         throw new Error("Invalid publish date detected during computing volume");
       }
@@ -291,7 +291,7 @@
 
     // 'olah2016attention'
     get slug() {
-      let slug = "";
+      var slug = "";
       if (this.authors.length) {
         slug += this.authors[0].lastName.toLowerCase();
         slug += this.publishedYear;
@@ -303,7 +303,7 @@
     get bibliographyEntries() {
       return new Map(
         this.citations.map((citationKey) => {
-          const entry = this.bibliography.get(citationKey);
+          var entry = this.bibliography.get(citationKey);
           return [citationKey, entry];
         })
       );
@@ -322,7 +322,7 @@
     }
 
     static fromObject(source) {
-      const frontMatter = new FrontMatter();
+      var frontMatter = new FrontMatter();
       Object.assign(frontMatter, source);
       return frontMatter;
     }
@@ -367,18 +367,18 @@
   // See the License for the specific language governing permissions and
   // limitations under the License.
 
-  const Mutating = (superclass) => {
+  var Mutating = (superclass) => {
     return class extends superclass {
-      constructor() {
+      varructor() {
         super();
 
         // set up mutation observer
-        const options = {
+        var options = {
           childList: true,
           characterData: true,
           subtree: true,
         };
-        const observer = new MutationObserver(() => {
+        var observer = new MutationObserver(() => {
           observer.disconnect();
           this.renderIfPossible();
           observer.observe(this, options);
@@ -403,7 +403,7 @@
       }
 
       renderContent() {
-        console.error(`Your class ${this.constructor.name} must provide a custom renderContent() method!`);
+        console.error(`Your class ${this.varructor.name} must provide a custom renderContent() method!`);
       }
     }; // end class
   }; // end mixin function
@@ -424,9 +424,9 @@
 
   /*global ShadyCSS*/
 
-  const Template = (name, templateString, useShadow = true) => {
+  var Template = (name, templateString, useShadow = true) => {
     return (superclass) => {
-      const template = document.createElement("template");
+      var template = document.createElement("template");
       template.innerHTML = templateString;
 
       if (useShadow && "ShadyCSS" in window) {
@@ -438,7 +438,7 @@
           return name;
         }
 
-        constructor() {
+        varructor() {
           super();
 
           this.clone = document.importNode(template.content, true);
@@ -503,16 +503,16 @@
 
   /*global katex */
 
-  const findEndOfMath = function (delimiter, text, startIndex) {
+  var findEndOfMath = function (delimiter, text, startIndex) {
     // Adapted from
     // https://github.com/Khan/perseus/blob/master/src/perseus-markdown.jsx
-    let index = startIndex;
-    let braceLevel = 0;
+    var index = startIndex;
+    var braceLevel = 0;
 
-    const delimLength = delimiter.length;
+    var delimLength = delimiter.length;
 
     while (index < text.length) {
-      const character = text[index];
+      var character = text[index];
 
       if (braceLevel <= 0 && text.slice(index, index + delimLength) === delimiter) {
         return index;
@@ -530,16 +530,16 @@
     return -1;
   };
 
-  const splitAtDelimiters = function (startData, leftDelim, rightDelim, display) {
-    const finalData = [];
+  var splitAtDelimiters = function (startData, leftDelim, rightDelim, display) {
+    var finalData = [];
 
-    for (let i = 0; i < startData.length; i++) {
+    for (var i = 0; i < startData.length; i++) {
       if (startData[i].type === "text") {
-        const text = startData[i].data;
+        var text = startData[i].data;
 
-        let lookingForLeft = true;
-        let currIndex = 0;
-        let nextIndex;
+        var lookingForLeft = true;
+        var currIndex = 0;
+        var nextIndex;
 
         nextIndex = text.indexOf(leftDelim);
         if (nextIndex !== -1) {
@@ -552,7 +552,7 @@
         }
 
         while (true) {
-          // eslint-disable-line no-constant-condition
+          // eslint-disable-line no-varant-condition
           if (lookingForLeft) {
             nextIndex = text.indexOf(leftDelim, currIndex);
             if (nextIndex === -1) {
@@ -596,10 +596,10 @@
     return finalData;
   };
 
-  const splitWithDelimiters = function (text, delimiters) {
-    let data = [{ type: "text", data: text }];
-    for (let i = 0; i < delimiters.length; i++) {
-      const delimiter = delimiters[i];
+  var splitWithDelimiters = function (text, delimiters) {
+    var data = [{ type: "text", data: text }];
+    for (var i = 0; i < delimiters.length; i++) {
+      var delimiter = delimiters[i];
       data = splitAtDelimiters(data, delimiter.left, delimiter.right, delimiter.display || false);
     }
     return data;
@@ -608,16 +608,16 @@
   /* Note: optionsCopy is mutated by this method. If it is ever exposed in the
    * API, we should copy it before mutating.
    */
-  const renderMathInText = function (text, optionsCopy) {
-    const data = splitWithDelimiters(text, optionsCopy.delimiters);
-    const fragment = document.createDocumentFragment();
+  var renderMathInText = function (text, optionsCopy) {
+    var data = splitWithDelimiters(text, optionsCopy.delimiters);
+    var fragment = document.createDocumentFragment();
 
-    for (let i = 0; i < data.length; i++) {
+    for (var i = 0; i < data.length; i++) {
       if (data[i].type === "text") {
         fragment.appendChild(document.createTextNode(data[i].data));
       } else {
-        const tag = document.createElement("d-math");
-        const math = data[i].data;
+        var tag = document.createElement("d-math");
+        var math = data[i].data;
         // Override any display mode defined in the settings with that
         // defined by the text itself
         optionsCopy.displayMode = data[i].display;
@@ -641,20 +641,20 @@
     return fragment;
   };
 
-  const renderElem = function (elem, optionsCopy) {
-    for (let i = 0; i < elem.childNodes.length; i++) {
-      const childNode = elem.childNodes[i];
+  var renderElem = function (elem, optionsCopy) {
+    for (var i = 0; i < elem.childNodes.length; i++) {
+      var childNode = elem.childNodes[i];
       if (childNode.nodeType === 3) {
         // Text node
-        const text = childNode.textContent;
+        var text = childNode.textContent;
         if (optionsCopy.mightHaveMath(text)) {
-          const frag = renderMathInText(text, optionsCopy);
+          var frag = renderMathInText(text, optionsCopy);
           i += frag.childNodes.length - 1;
           elem.replaceChild(frag, childNode);
         }
       } else if (childNode.nodeType === 1) {
         // Element node
-        const shouldRender = optionsCopy.ignoredTags.indexOf(childNode.nodeName.toLowerCase()) === -1;
+        var shouldRender = optionsCopy.ignoredTags.indexOf(childNode.nodeName.toLowerCase()) === -1;
 
         if (shouldRender) {
           renderElem(childNode, optionsCopy);
@@ -664,7 +664,7 @@
     }
   };
 
-  const defaultAutoRenderOptions = {
+  var defaultAutoRenderOptions = {
     delimiters: [
       { left: "$$", right: "$$", display: true },
       { left: "\\[", right: "\\]", display: true },
@@ -680,24 +680,24 @@
     },
   };
 
-  const renderMathInElement = function (elem, options) {
+  var renderMathInElement = function (elem, options) {
     if (!elem) {
       throw new Error("No element provided to render");
     }
 
-    const optionsCopy = Object.assign({}, defaultAutoRenderOptions, options);
-    const delimiterStrings = optionsCopy.delimiters.flatMap((d) => [d.left, d.right]);
-    const mightHaveMath = (text) => delimiterStrings.some((d) => text.indexOf(d) !== -1);
+    var optionsCopy = Object.assign({}, defaultAutoRenderOptions, options);
+    var delimiterStrings = optionsCopy.delimiters.flatMap((d) => [d.left, d.right]);
+    var mightHaveMath = (text) => delimiterStrings.some((d) => text.indexOf(d) !== -1);
     optionsCopy.mightHaveMath = mightHaveMath;
     renderElem(elem, optionsCopy);
   };
 
   // Copyright 2018 The Distill Template Authors
 
-  const katexJSURL = "https://distill.pub/third-party/katex/katex.min.js";
-  const katexCSSTag = '<link rel="stylesheet" href="https://distill.pub/third-party/katex/katex.min.css" crossorigin="anonymous">';
+  var katexJSURL = "https://distill.pub/third-party/katex/katex.min.js";
+  var katexCSSTag = '<link rel="stylesheet" href="https://distill.pub/third-party/katex/katex.min.css" crossorigin="anonymous">';
 
-  const T = Template(
+  var T = Template(
     "d-math",
     `
 ${katexCSSTag}
@@ -742,8 +742,8 @@ ${math}
 
     static katexLoadedCallback() {
       // render all d-math tags
-      const mathTags = document.querySelectorAll("d-math");
-      for (const mathTag of mathTags) {
+      var mathTags = document.querySelectorAll("d-math");
+      for (var mathTag of mathTags) {
         mathTag.renderContent();
       }
       // transform inline delimited math to d-math tags
@@ -756,7 +756,7 @@ ${math}
       // css tag can use this convenience function
       document.head.insertAdjacentHTML("beforeend", katexCSSTag);
       // script tag has to be created to work properly
-      const scriptTag = document.createElement("script");
+      var scriptTag = document.createElement("script");
       scriptTag.src = katexJSURL;
       scriptTag.async = true;
       scriptTag.onload = DMath.katexLoadedCallback;
@@ -767,7 +767,7 @@ ${math}
     }
 
     get options() {
-      const localOptions = { displayMode: this.hasAttribute("block") };
+      var localOptions = { displayMode: this.hasAttribute("block") };
       return Object.assign(localOptions, DMath.katexOptions);
     }
 
@@ -780,7 +780,7 @@ ${math}
 
     renderContent() {
       if (typeof katex !== "undefined") {
-        const container = this.root.querySelector("#katex-container");
+        var container = this.root.querySelector("#katex-container");
         katex.render(this.textContent, container, this.options);
       }
     }
@@ -805,12 +805,12 @@ ${math}
   // limitations under the License.
 
   function collect_citations(dom = document) {
-    const citations = new Set();
-    const citeTags = dom.querySelectorAll("d-cite");
-    for (const tag of citeTags) {
-      const keyString = tag.getAttribute("key") || tag.getAttribute("bibtex-key");
-      const keys = keyString.split(",").map((k) => k.trim());
-      for (const key of keys) {
+    var citations = new Set();
+    var citeTags = dom.querySelectorAll("d-cite");
+    for (var tag of citeTags) {
+      var keyString = tag.getAttribute("key") || tag.getAttribute("bibtex-key");
+      var keys = keyString.split(",").map((k) => k.trim());
+      for (var key of keys) {
         citations.add(key);
       }
     }
@@ -822,7 +822,7 @@ ${math}
       return "";
     }
     var names = ent.author.split(" and ");
-    let name_strings = names.map((name) => {
+    var name_strings = names.map((name) => {
       name = name.trim();
       if (name.indexOf(",") != -1) {
         var last = name.split(",")[0].trim();
@@ -979,16 +979,16 @@ ${math}
     // authors used to have propoerties "affiliation" and "affiliationURL".
     // We now encourage using an array for affiliations containing objects with
     // properties "name" and "url".
-    for (let author of frontMatter.authors) {
-      const hasOldStyle = Boolean(author.affiliation);
-      const hasNewStyle = Boolean(author.affiliations);
+    for (var author of frontMatter.authors) {
+      var hasOldStyle = Boolean(author.affiliation);
+      var hasNewStyle = Boolean(author.affiliations);
       if (!hasOldStyle) continue;
       if (hasNewStyle) {
         console.warn(
           `Author ${author.author} has both old-style ("affiliation" & "affiliationURL") and new style ("affiliations") affiliation information!`
         );
       } else {
-        let newAffiliation = {
+        var newAffiliation = {
           name: author.affiliation,
         };
         if (author.affiliationURL) newAffiliation.url = author.affiliationURL;
@@ -999,12 +999,12 @@ ${math}
   }
 
   function parseFrontmatter(element) {
-    const scriptTag = element.firstElementChild;
+    var scriptTag = element.firstElementChild;
     if (scriptTag) {
-      const type = scriptTag.getAttribute("type");
+      var type = scriptTag.getAttribute("type");
       if (type.split("/")[1] == "json") {
-        const content = scriptTag.textContent;
-        const parsed = JSON.parse(content);
+        var content = scriptTag.textContent;
+        var parsed = JSON.parse(content);
         return _moveLegacyAffiliationFormatIntoArray(parsed);
       } else {
         console.error("Distill only supports JSON frontmatter tags anymore; no more YAML.");
@@ -1022,18 +1022,18 @@ ${math}
       return "d-front-matter";
     }
 
-    constructor() {
+    varructor() {
       super();
 
-      const options = {
+      var options = {
         childList: true,
         characterData: true,
         subtree: true,
       };
-      const observer = new MutationObserver((entries) => {
-        for (const entry of entries) {
+      var observer = new MutationObserver((entries) => {
+        for (var entry of entries) {
           if (entry.target.nodeName === "SCRIPT" || entry.type === "characterData") {
-            const data = parseFrontmatter(this);
+            var data = parseFrontmatter(this);
             this.notify(data);
           }
         }
@@ -1042,8 +1042,8 @@ ${math}
     }
 
     notify(data) {
-      const options = { detail: data, bubbles: true };
-      const event = new CustomEvent("onFrontMatterChanged", options);
+      var options = { detail: data, bubbles: true };
+      var event = new CustomEvent("onFrontMatterChanged", options);
       document.dispatchEvent(event);
     }
   }
@@ -1072,8 +1072,8 @@ ${math}
   // if authors, no byline -> add byline
 
   function optionalComponents(dom, data) {
-    const body = dom.body;
-    const article = body.querySelector("d-article");
+    var body = dom.body;
+    var article = body.querySelector("d-article");
 
     // If we don't have an article tag, something weird is going on—giving up.
     if (!article) {
@@ -1081,7 +1081,7 @@ ${math}
       return;
     }
 
-    let byline = dom.querySelector("d-byline");
+    var byline = dom.querySelector("d-byline");
     if (!byline) {
       if (data.authors) {
         byline = dom.createElement("d-byline");
@@ -1091,24 +1091,24 @@ ${math}
       }
     }
 
-    let title = dom.querySelector("d-title");
+    var title = dom.querySelector("d-title");
     if (!title) {
       title = dom.createElement("d-title");
       body.insertBefore(title, byline);
     }
 
-    let h1 = title.querySelector("h1");
+    var h1 = title.querySelector("h1");
     if (!h1) {
       h1 = dom.createElement("h1");
       h1.textContent = data.title;
       title.insertBefore(h1, title.firstChild);
     }
 
-    const hasPassword = typeof data.password !== "undefined";
-    let interstitial = body.querySelector("d-interstitial");
+    var hasPassword = typeof data.password !== "undefined";
+    var interstitial = body.querySelector("d-interstitial");
     if (hasPassword && !interstitial) {
-      const inBrowser = typeof window !== "undefined";
-      const onLocalhost = inBrowser && window.location.hostname.includes("localhost");
+      var inBrowser = typeof window !== "undefined";
+      var onLocalhost = inBrowser && window.location.hostname.includes("localhost");
       if (!inBrowser || !onLocalhost) {
         interstitial = dom.createElement("d-interstitial");
         interstitial.password = data.password;
@@ -1118,19 +1118,19 @@ ${math}
       interstitial.parentElement.removeChild(this);
     }
 
-    let appendix = dom.querySelector("d-appendix");
+    var appendix = dom.querySelector("d-appendix");
     if (!appendix) {
       appendix = dom.createElement("d-appendix");
       dom.body.appendChild(appendix);
     }
 
-    let footnoteList = dom.querySelector("d-footnote-list");
+    var footnoteList = dom.querySelector("d-footnote-list");
     if (!footnoteList) {
       footnoteList = dom.createElement("d-footnote-list");
       appendix.appendChild(footnoteList);
     }
 
-    let citationList = dom.querySelector("d-citation-list");
+    var citationList = dom.querySelector("d-citation-list");
     if (!citationList) {
       citationList = dom.createElement("d-citation-list");
       appendix.appendChild(citationList);
@@ -1139,9 +1139,9 @@ ${math}
 
   // Copyright 2018 The Distill Template Authors
 
-  const frontMatter = new FrontMatter();
+  var frontMatter = new FrontMatter();
 
-  const Controller = {
+  var Controller = {
     frontMatter: frontMatter,
     waitingOn: {
       bibliography: [],
@@ -1149,7 +1149,7 @@ ${math}
     },
     listeners: {
       onCiteKeyCreated(event) {
-        const [citeTag, keys] = event.detail;
+        var [citeTag, keys] = event.detail;
 
         // ensure we have citations
         if (!frontMatter.citationsCollected) {
@@ -1165,38 +1165,38 @@ ${math}
           return;
         }
 
-        const numbers = keys.map((key) => frontMatter.citations.indexOf(key));
+        var numbers = keys.map((key) => frontMatter.citations.indexOf(key));
         citeTag.numbers = numbers;
-        const entries = keys.map((key) => frontMatter.bibliography.get(key));
+        var entries = keys.map((key) => frontMatter.bibliography.get(key));
         citeTag.entries = entries;
       },
 
       onCiteKeyChanged() {
-        // const [citeTag, keys] = event.detail;
+        // var [citeTag, keys] = event.detail;
 
         // update citations
         frontMatter.citations = collect_citations();
         frontMatter.citationsCollected = true;
-        for (const waitingCallback of Controller.waitingOn.citations.slice()) {
+        for (var waitingCallback of Controller.waitingOn.citations.slice()) {
           waitingCallback();
         }
 
         // update bibliography
-        const citationListTag = document.querySelector("d-citation-list");
-        const bibliographyEntries = new Map(
+        var citationListTag = document.querySelector("d-citation-list");
+        var bibliographyEntries = new Map(
           frontMatter.citations.map((citationKey) => {
             return [citationKey, frontMatter.bibliography.get(citationKey)];
           })
         );
         citationListTag.citations = bibliographyEntries;
 
-        const citeTags = document.querySelectorAll("d-cite");
-        for (const citeTag of citeTags) {
+        var citeTags = document.querySelectorAll("d-cite");
+        for (var citeTag of citeTags) {
           console.log(citeTag);
-          const keys = citeTag.keys;
-          const numbers = keys.map((key) => frontMatter.citations.indexOf(key));
+          var keys = citeTag.keys;
+          var numbers = keys.map((key) => frontMatter.citations.indexOf(key));
           citeTag.numbers = numbers;
-          const entries = keys.map((key) => frontMatter.bibliography.get(key));
+          var entries = keys.map((key) => frontMatter.bibliography.get(key));
           citeTag.entries = entries;
         }
       },
@@ -1206,13 +1206,13 @@ ${math}
       },
 
       onBibliographyChanged(event) {
-        const citationListTag = document.querySelector("d-citation-list");
+        var citationListTag = document.querySelector("d-citation-list");
 
-        const bibliography = event.detail;
+        var bibliography = event.detail;
 
         frontMatter.bibliography = bibliography;
         frontMatter.bibliographyParsed = true;
-        for (const waitingCallback of Controller.waitingOn.bibliography.slice()) {
+        for (var waitingCallback of Controller.waitingOn.bibliography.slice()) {
           waitingCallback();
         }
 
@@ -1230,7 +1230,7 @@ ${math}
         if (citationListTag.hasAttribute("distill-prerendered")) {
           console.debug("Citation list was prerendered; not updating it.");
         } else {
-          const entries = new Map(
+          var entries = new Map(
             frontMatter.citations.map((citationKey) => {
               return [citationKey, frontMatter.bibliography.get(citationKey)];
             })
@@ -1240,20 +1240,20 @@ ${math}
       },
 
       onFootnoteChanged() {
-        // const footnote = event.detail;
+        // var footnote = event.detail;
         //TODO: optimize to only update current footnote
-        const footnotesList = document.querySelector("d-footnote-list");
+        var footnotesList = document.querySelector("d-footnote-list");
         if (footnotesList) {
-          const footnotes = document.querySelectorAll("d-footnote");
+          var footnotes = document.querySelectorAll("d-footnote");
           footnotesList.footnotes = footnotes;
         }
       },
 
       onFrontMatterChanged(event) {
-        const data = event.detail;
+        var data = event.detail;
         mergeFromYMLFrontmatter(frontMatter, data);
 
-        const interstitial = document.querySelector("d-interstitial");
+        var interstitial = document.querySelector("d-interstitial");
         if (interstitial) {
           if (typeof frontMatter.password !== "undefined") {
             interstitial.password = frontMatter.password;
@@ -1262,16 +1262,16 @@ ${math}
           }
         }
 
-        const prerendered = document.body.hasAttribute("distill-prerendered");
+        var prerendered = document.body.hasAttribute("distill-prerendered");
         if (!prerendered && domContentLoaded()) {
           optionalComponents(document, frontMatter);
 
-          const appendix = document.querySelector("distill-appendix");
+          var appendix = document.querySelector("distill-appendix");
           if (appendix) {
             appendix.frontMatter = frontMatter;
           }
 
-          const byline = document.querySelector("d-byline");
+          var byline = document.querySelector("d-byline");
           if (byline) {
             byline.frontMatter = frontMatter;
           }
@@ -1294,28 +1294,28 @@ ${math}
           console.debug("Runlevel 4: Controller running DOMContentLoaded");
         }
 
-        const frontMatterTag = document.querySelector("d-front-matter");
+        var frontMatterTag = document.querySelector("d-front-matter");
         if (frontMatterTag) {
-          const data = parseFrontmatter(frontMatterTag);
+          var data = parseFrontmatter(frontMatterTag);
           Controller.listeners.onFrontMatterChanged({ detail: data });
         }
 
         // Resolving "citations" dependency due to initial DOM load
         frontMatter.citations = collect_citations();
         frontMatter.citationsCollected = true;
-        for (const waitingCallback of Controller.waitingOn.citations.slice()) {
+        for (var waitingCallback of Controller.waitingOn.citations.slice()) {
           waitingCallback();
         }
 
         if (frontMatter.bibliographyParsed) {
-          for (const waitingCallback of Controller.waitingOn.bibliography.slice()) {
+          for (var waitingCallback of Controller.waitingOn.bibliography.slice()) {
             waitingCallback();
           }
         }
 
-        const footnotesList = document.querySelector("d-footnote-list");
+        var footnotesList = document.querySelector("d-footnote-list");
         if (footnotesList) {
-          const footnotes = document.querySelectorAll("d-footnote");
+          var footnotes = document.querySelectorAll("d-footnote");
           footnotesList.footnotes = footnotes;
         }
       },
@@ -1342,18 +1342,18 @@ ${math}
 
   // Copyright 2018 The Distill Template Authors
 
-  const styles = base + layout + title + byline + article + math + print;
+  var styles = base + layout + title + byline + article + math + print;
 
   function makeStyleTag(dom) {
-    const styleTagId = "distill-prerendered-styles";
-    const prerenderedTag = dom.getElementById(styleTagId);
+    var styleTagId = "distill-prerendered-styles";
+    var prerenderedTag = dom.getElementById(styleTagId);
     if (!prerenderedTag) {
-      const styleTag = dom.createElement("style");
+      var styleTag = dom.createElement("style");
       styleTag.id = styleTagId;
       styleTag.type = "text/css";
-      const cssTextTag = dom.createTextNode(styles);
+      var cssTextTag = dom.createTextNode(styles);
       styleTag.appendChild(cssTextTag);
-      const firstScriptTag = dom.head.querySelector("script");
+      var firstScriptTag = dom.head.querySelector("script");
       dom.head.insertBefore(styleTag, firstScriptTag);
     }
   }
@@ -1374,7 +1374,7 @@ ${math}
 
   function addPolyfill(polyfill, polyfillLoadedCallback) {
     console.debug("Runlevel 0: Polyfill required: " + polyfill.name);
-    const script = document.createElement("script");
+    var script = document.createElement("script");
     script.src = polyfill.url;
     script.async = false;
     if (polyfillLoadedCallback) {
@@ -1388,7 +1388,7 @@ ${math}
     document.head.appendChild(script);
   }
 
-  const polyfills = [
+  var polyfills = [
     {
       name: "WebComponents",
       support: function () {
@@ -1419,7 +1419,7 @@ ${math}
 
     static load(callback) {
       // Define an intermediate callback that checks if all is loaded.
-      const polyfillLoaded = function (polyfill) {
+      var polyfillLoaded = function (polyfill) {
         polyfill.loaded = true;
         console.debug("Runlevel 0: Polyfill has finished loading: " + polyfill.name);
         // console.debug(window[polyfill.name]);
@@ -1431,7 +1431,7 @@ ${math}
         }
       };
       // Add polyfill script tags
-      for (const polyfill of Polyfills.neededPolyfills) {
+      for (var polyfill of Polyfills.neededPolyfills) {
         addPolyfill(polyfill, polyfillLoaded);
       }
     }
@@ -1458,18 +1458,18 @@ ${math}
   // See the License for the specific language governing permissions and
   // limitations under the License.
 
-  // const marginSmall = 16;
-  // const marginLarge = 3 * marginSmall;
-  // const margin = marginSmall + marginLarge;
-  // const gutter = marginSmall;
-  // const outsetAmount = margin / 2;
-  // const numCols = 4;
-  // const numGutters = numCols - 1;
-  // const columnWidth = (768 - 2 * marginLarge - numGutters * gutter) / numCols;
+  // var marginSmall = 16;
+  // var marginLarge = 3 * marginSmall;
+  // var margin = marginSmall + marginLarge;
+  // var gutter = marginSmall;
+  // var outsetAmount = margin / 2;
+  // var numCols = 4;
+  // var numGutters = numCols - 1;
+  // var columnWidth = (768 - 2 * marginLarge - numGutters * gutter) / numCols;
   //
-  // const screenwidth = 768;
-  // const pageWidth = screenwidth - 2 * marginLarge;
-  // const bodyWidth = pageWidth - columnWidth - gutter;
+  // var screenwidth = 768;
+  // var pageWidth = screenwidth - 2 * marginLarge;
+  // var bodyWidth = pageWidth - columnWidth - gutter;
 
   function body(selector) {
     return `${selector} {
@@ -1480,7 +1480,7 @@ ${math}
 
   // Copyright 2018 The Distill Template Authors
 
-  const T$1 = Template(
+  var T$1 = Template(
     "d-abstract",
     `
 <style>
@@ -1507,7 +1507,7 @@ ${math}
 
   // Copyright 2018 The Distill Template Authors
 
-  const T$2 = Template(
+  var T$2 = Template(
     "d-appendix",
     `
 <style>
@@ -1591,30 +1591,30 @@ d-appendix > distill-appendix {
   // import { Template } from '../mixins/template';
   // import { Controller } from '../controller';
 
-  const isOnlyWhitespace = /^\s*$/;
+  var isOnlyWhitespace = /^\s*$/;
 
   class Article extends HTMLElement {
     static get is() {
       return "d-article";
     }
 
-    constructor() {
+    varructor() {
       super();
 
       new MutationObserver((mutations) => {
-        for (const mutation of mutations) {
-          for (const addedNode of mutation.addedNodes) {
+        for (var mutation of mutations) {
+          for (var addedNode of mutation.addedNodes) {
             switch (addedNode.nodeName) {
               case "#text":
                 {
                   // usually text nodes are only linebreaks.
-                  const text = addedNode.nodeValue;
+                  var text = addedNode.nodeValue;
                   if (!isOnlyWhitespace.test(text)) {
                     console.warn(
                       "Use of unwrapped text in distill articles is discouraged as it breaks layout! Please wrap any text in a <span> or <p> tag. We found the following text: " +
                         text
                     );
-                    const wrapper = document.createElement("span");
+                    var wrapper = document.createElement("span");
                     wrapper.innerHTML = addedNode.nodeValue;
                     addedNode.parentNode.insertBefore(wrapper, addedNode);
                     addedNode.parentNode.removeChild(addedNode);
@@ -1951,11 +1951,11 @@ d-appendix > distill-appendix {
   }
 
   function parseBibtex(bibtex) {
-    const bibliography = new Map();
-    const parsedEntries = bibtexParse.toJSON(bibtex);
-    for (const entry of parsedEntries) {
+    var bibliography = new Map();
+    var parsedEntries = bibtexParse.toJSON(bibtex);
+    for (var entry of parsedEntries) {
       // normalize tags; note entryTags is an object, not Map
-      for (const [key, value] of Object.entries(entry.entryTags)) {
+      for (var [key, value] of Object.entries(entry.entryTags)) {
         entry.entryTags[key.toLowerCase()] = normalizeTag(value);
       }
       entry.entryTags.type = entry.entryType;
@@ -1983,17 +1983,17 @@ d-appendix > distill-appendix {
       return "d-bibliography";
     }
 
-    constructor() {
+    varructor() {
       super();
 
       // set up mutation observer
-      const options = {
+      var options = {
         childList: true,
         characterData: true,
         subtree: true,
       };
-      const observer = new MutationObserver((entries) => {
-        for (const entry of entries) {
+      var observer = new MutationObserver((entries) => {
+        for (var entry of entries) {
           if (entry.target.nodeName === "SCRIPT" || entry.type === "characterData") {
             this.parseIfPossible();
           }
@@ -2009,17 +2009,17 @@ d-appendix > distill-appendix {
     }
 
     parseIfPossible() {
-      const scriptTag = this.querySelector("script");
+      var scriptTag = this.querySelector("script");
       if (!scriptTag) return;
       if (scriptTag.type == "text/bibtex") {
-        const newBibtex = scriptTag.textContent;
+        var newBibtex = scriptTag.textContent;
         if (this.bibtex !== newBibtex) {
           this.bibtex = newBibtex;
-          const bibliography = parseBibtex(this.bibtex);
+          var bibliography = parseBibtex(this.bibtex);
           this.notify(bibliography);
         }
       } else if (scriptTag.type == "text/json") {
-        const bibliography = new Map(JSON.parse(scriptTag.textContent));
+        var bibliography = new Map(JSON.parse(scriptTag.textContent));
         this.notify(bibliography);
       } else {
         console.warn("Unsupported bibliography script tag type: " + scriptTag.type);
@@ -2027,8 +2027,8 @@ d-appendix > distill-appendix {
     }
 
     notify(bibliography) {
-      const options = { detail: bibliography, bubbles: true };
-      const event = new CustomEvent("onBibliographyChanged", options);
+      var options = { detail: bibliography, bubbles: true };
+      var event = new CustomEvent("onBibliographyChanged", options);
       this.dispatchEvent(event);
     }
 
@@ -2039,7 +2039,7 @@ d-appendix > distill-appendix {
     }
 
     receivedBibtex(event) {
-      const bibliography = parseBibtex(event.target.response);
+      var bibliography = parseBibtex(event.target.response);
       this.notify(bibliography);
     }
 
@@ -2126,7 +2126,7 @@ d-appendix > distill-appendix {
 
   // Copyright 2018 The Distill Template Authors
 
-  const T$3 = Template(
+  var T$3 = Template(
     "d-cite",
     `
 <style>
@@ -2187,7 +2187,7 @@ ul li:last-of-type {
 
   class Cite extends T$3(HTMLElement) {
     /* Lifecycle */
-    constructor() {
+    varructor() {
       super();
       this._numbers = [];
       this._entries = [];
@@ -2212,8 +2212,8 @@ ul li:last-of-type {
     //TODO This causes an infinite loop on firefox with polyfills.
     // This is only needed for interactive editing so no priority.
     // disconnectedCallback() {
-    // const options = { detail: [this, this.keys], bubbles: true };
-    // const event = new CustomEvent('onCiteKeyRemoved', options);
+    // var options = { detail: [this, this.keys], bubbles: true };
+    // var event = new CustomEvent('onCiteKeyRemoved', options);
     // document.dispatchEvent(event);
     // }
 
@@ -2224,10 +2224,10 @@ ul li:last-of-type {
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-      const eventName = oldValue ? "onCiteKeyChanged" : "onCiteKeyCreated";
-      const keys = newValue.split(",").map((k) => k.trim());
-      const options = { detail: [this, keys], bubbles: true };
-      const event = new CustomEvent(eventName, options);
+      var eventName = oldValue ? "onCiteKeyChanged" : "onCiteKeyCreated";
+      var keys = newValue.split(",").map((k) => k.trim());
+      var options = { detail: [this, keys], bubbles: true };
+      var event = new CustomEvent(eventName, options);
       document.dispatchEvent(event);
     }
 
@@ -2240,7 +2240,7 @@ ul li:last-of-type {
     }
 
     get keys() {
-      const result = this.key.split(",");
+      var result = this.key.split(",");
       console.log(result);
       return result;
     }
@@ -2258,10 +2258,10 @@ ul li:last-of-type {
 
     displayNumbers(numbers) {
       if (!this.innerSpan) return;
-      const numberStrings = numbers.map((index) => {
+      var numberStrings = numbers.map((index) => {
         return index == -1 ? "?" : index + 1 + "";
       });
-      const textContent = "[" + numberStrings.join(", ") + "]";
+      var textContent = "[" + numberStrings.join(", ") + "]";
       this.innerSpan.textContent = textContent;
     }
 
@@ -2287,7 +2287,7 @@ ul li:last-of-type {
 
   // Copyright 2018 The Distill Template Authors
 
-  const styles$1 = `
+  var styles$1 = `
 d-citation-list {
   contain: style;
 }
@@ -2304,15 +2304,15 @@ d-citation-list .references .title {
   function renderCitationList(element, entries, dom = document) {
     if (entries.size > 0) {
       element.style.display = "";
-      let list = element.querySelector(".references");
+      var list = element.querySelector(".references");
       if (list) {
         list.innerHTML = "";
       } else {
-        const stylesTag = dom.createElement("style");
+        var stylesTag = dom.createElement("style");
         stylesTag.innerHTML = styles$1;
         element.appendChild(stylesTag);
 
-        const heading = dom.createElement("h3");
+        var heading = dom.createElement("h3");
         heading.id = "references";
         heading.textContent = "References";
         element.appendChild(heading);
@@ -2323,8 +2323,8 @@ d-citation-list .references .title {
         element.appendChild(list);
       }
 
-      for (const [key, entry] of entries) {
-        const listItem = dom.createElement("li");
+      for (var [key, entry] of entries) {
+        var listItem = dom.createElement("li");
         listItem.id = key;
         listItem.innerHTML = bibliography_cite(entry);
         list.appendChild(listItem);
@@ -3303,7 +3303,7 @@ d-citation-list .references .title {
       "class-name": [
         Prism.languages.clike["class-name"],
         {
-          pattern: /(^|[^$\w\xA0-\uFFFF])[_$A-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\.(?:prototype|constructor))/,
+          pattern: /(^|[^$\w\xA0-\uFFFF])[_$A-Z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\.(?:prototype|varructor))/,
           lookbehind: true,
         },
       ],
@@ -3314,7 +3314,7 @@ d-citation-list .references .title {
         },
         {
           pattern:
-            /(^|[^.]|\.\.\.\s*)\b(?:as|async(?=\s*(?:function\b|\(|[$\w\xA0-\uFFFF]|$))|await|break|case|class|const|continue|debugger|default|delete|do|else|enum|export|extends|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)\b/,
+            /(^|[^.]|\.\.\.\s*)\b(?:as|async(?=\s*(?:function\b|\(|[$\w\xA0-\uFFFF]|$))|await|break|case|class|var|continue|debugger|default|delete|do|else|enum|export|extends|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)\b/,
           lookbehind: true,
         },
       ],
@@ -3357,12 +3357,12 @@ d-citation-list .references .title {
         },
         {
           pattern:
-            /((?:\b|\s|^)(?!(?:as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)(?![$\w\xA0-\uFFFF]))(?:[_$A-Za-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*\s*)\(\s*)(?!\s)(?:[^()]|\([^()]*\))+?(?=\s*\)\s*\{)/,
+            /((?:\b|\s|^)(?!(?:as|async|await|break|case|catch|class|var|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)(?![$\w\xA0-\uFFFF]))(?:[_$A-Za-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*\s*)\(\s*)(?!\s)(?:[^()]|\([^()]*\))+?(?=\s*\)\s*\{)/,
           lookbehind: true,
           inside: Prism.languages.javascript,
         },
       ],
-      constant: /\b[A-Z](?:[A-Z_]|\dx?)*\b/,
+      varant: /\b[A-Z](?:[A-Z_]|\dx?)*\b/,
     });
 
     Prism.languages.insertBefore("javascript", "string", {
@@ -3617,7 +3617,7 @@ d-citation-list .references .title {
     var insideString = {
       environment: {
         pattern: RegExp("\\$" + envVars),
-        alias: "constant",
+        alias: "varant",
       },
       variable: [
         // [0]: Arithmetic Environment
@@ -3658,7 +3658,7 @@ d-citation-list .references .title {
             environment: {
               pattern: RegExp("(\\{)" + envVars),
               lookbehind: true,
-              alias: "constant",
+              alias: "varant",
             },
           },
         },
@@ -3708,7 +3708,7 @@ d-citation-list .references .title {
           environment: {
             pattern: RegExp("(^|[\\s;|&]|[<>]\\()" + envVars),
             lookbehind: true,
-            alias: "constant",
+            alias: "varant",
           },
         },
         alias: "variable",
@@ -3739,7 +3739,7 @@ d-citation-list .references .title {
       ],
       environment: {
         pattern: RegExp("\\$?" + envVars),
-        alias: "constant",
+        alias: "varant",
       },
       variable: insideString.variable,
       function: {
@@ -3811,7 +3811,7 @@ d-citation-list .references .title {
 
   Prism.languages.go = Prism.languages.extend("clike", {
     keyword:
-      /\b(?:break|case|chan|const|continue|default|defer|else|fallthrough|for|func|go(?:to)?|if|import|interface|map|package|range|return|select|struct|switch|type|var)\b/,
+      /\b(?:break|case|chan|var|continue|default|defer|else|fallthrough|for|func|go(?:to)?|if|import|interface|map|package|range|return|select|struct|switch|type|var)\b/,
     builtin:
       /\b(?:bool|byte|complex(?:64|128)|error|float(?:32|64)|rune|string|u?int(?:8|16|32|64)?|uintptr|append|cap|close|complex|copy|delete|imag|len|make|new|panic|print(?:ln)?|real|recover)\b/,
     boolean: /\b(?:_|iota|nil|true|false)\b/,
@@ -4173,20 +4173,20 @@ d-citation-list .references .title {
     },
     string: /("""|''')[\s\S]+?\1|("|')(?:\\.|(?!\2)[^\\\r\n])*\2/,
     keyword:
-      /\b(?:abstract|baremodule|begin|bitstype|break|catch|ccall|const|continue|do|else|elseif|end|export|finally|for|function|global|if|immutable|import|importall|in|let|local|macro|module|print|println|quote|return|struct|try|type|typealias|using|while)\b/,
+      /\b(?:abstract|baremodule|begin|bitstype|break|catch|ccall|var|continue|do|else|elseif|end|export|finally|for|function|global|if|immutable|import|importall|in|let|local|macro|module|print|println|quote|return|struct|try|type|typealias|using|while)\b/,
     boolean: /\b(?:true|false)\b/,
     number: /(?:\b(?=\d)|\B(?=\.))(?:0[box])?(?:[\da-f]+\.?\d*|\.\d+)(?:[efp][+-]?\d+)?j?/i,
     operator: /[-+*^%÷&$\\]=?|\/[\/=]?|!=?=?|\|[=>]?|<(?:<=?|[=:])?|>(?:=|>>?=?)?|==?=?|[~≠≤≥]/,
     punctuation: /[{}[\];(),.:]/,
-    constant: /\b(?:(?:NaN|Inf)(?:16|32|64)?)\b/,
+    varant: /\b(?:(?:NaN|Inf)(?:16|32|64)?)\b/,
   };
 
   var css =
-    '/**\n * prism.js default theme for JavaScript, CSS and HTML\n * Based on dabblet (http://dabblet.com)\n * @author Lea Verou\n */\n\ncode[class*="language-"],\npre[class*="language-"] {\n\tcolor: black;\n\tbackground: none;\n\ttext-shadow: 0 1px white;\n\tfont-family: Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace;\n\tfont-size: 1em;\n\ttext-align: left;\n\twhite-space: pre;\n\tword-spacing: normal;\n\tword-break: normal;\n\tword-wrap: normal;\n\tline-height: 1.5;\n\n\t-moz-tab-size: 4;\n\t-o-tab-size: 4;\n\ttab-size: 4;\n\n\t-webkit-hyphens: none;\n\t-moz-hyphens: none;\n\t-ms-hyphens: none;\n\thyphens: none;\n}\n\npre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,\ncode[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {\n\ttext-shadow: none;\n\tbackground: #b3d4fc;\n}\n\npre[class*="language-"]::selection, pre[class*="language-"] ::selection,\ncode[class*="language-"]::selection, code[class*="language-"] ::selection {\n\ttext-shadow: none;\n\tbackground: #b3d4fc;\n}\n\n@media print {\n\tcode[class*="language-"],\n\tpre[class*="language-"] {\n\t\ttext-shadow: none;\n\t}\n}\n\n/* Code blocks */\npre[class*="language-"] {\n\tpadding: 1em;\n\tmargin: .5em 0;\n\toverflow: auto;\n}\n\n:not(pre) > code[class*="language-"],\npre[class*="language-"] {\n\tbackground: #f5f2f0;\n}\n\n/* Inline code */\n:not(pre) > code[class*="language-"] {\n\tpadding: .1em;\n\tborder-radius: .3em;\n\twhite-space: normal;\n}\n\n.token.comment,\n.token.prolog,\n.token.doctype,\n.token.cdata {\n\tcolor: slategray;\n}\n\n.token.punctuation {\n\tcolor: #999;\n}\n\n.token.namespace {\n\topacity: .7;\n}\n\n.token.property,\n.token.tag,\n.token.boolean,\n.token.number,\n.token.constant,\n.token.symbol,\n.token.deleted {\n\tcolor: #905;\n}\n\n.token.selector,\n.token.attr-name,\n.token.string,\n.token.char,\n.token.builtin,\n.token.inserted {\n\tcolor: #690;\n}\n\n.token.operator,\n.token.entity,\n.token.url,\n.language-css .token.string,\n.style .token.string {\n\tcolor: #9a6e3a;\n\tbackground: hsla(0, 0%, 100%, .5);\n}\n\n.token.atrule,\n.token.attr-value,\n.token.keyword {\n\tcolor: #07a;\n}\n\n.token.function,\n.token.class-name {\n\tcolor: #DD4A68;\n}\n\n.token.regex,\n.token.important,\n.token.variable {\n\tcolor: #e90;\n}\n\n.token.important,\n.token.bold {\n\tfont-weight: bold;\n}\n.token.italic {\n\tfont-style: italic;\n}\n\n.token.entity {\n\tcursor: help;\n}\n';
+    '/**\n * prism.js default theme for JavaScript, CSS and HTML\n * Based on dabbvar (http://dabblet.com)\n * @author Lea Verou\n */\n\ncode[class*="language-"],\npre[class*="language-"] {\n\tcolor: black;\n\tbackground: none;\n\ttext-shadow: 0 1px white;\n\tfont-family: Consolas, Monaco, \'Andale Mono\', \'Ubuntu Mono\', monospace;\n\tfont-size: 1em;\n\ttext-align: left;\n\twhite-space: pre;\n\tword-spacing: normal;\n\tword-break: normal;\n\tword-wrap: normal;\n\tline-height: 1.5;\n\n\t-moz-tab-size: 4;\n\t-o-tab-size: 4;\n\ttab-size: 4;\n\n\t-webkit-hyphens: none;\n\t-moz-hyphens: none;\n\t-ms-hyphens: none;\n\thyphens: none;\n}\n\npre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,\ncode[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {\n\ttext-shadow: none;\n\tbackground: #b3d4fc;\n}\n\npre[class*="language-"]::selection, pre[class*="language-"] ::selection,\ncode[class*="language-"]::selection, code[class*="language-"] ::selection {\n\ttext-shadow: none;\n\tbackground: #b3d4fc;\n}\n\n@media print {\n\tcode[class*="language-"],\n\tpre[class*="language-"] {\n\t\ttext-shadow: none;\n\t}\n}\n\n/* Code blocks */\npre[class*="language-"] {\n\tpadding: 1em;\n\tmargin: .5em 0;\n\toverflow: auto;\n}\n\n:not(pre) > code[class*="language-"],\npre[class*="language-"] {\n\tbackground: #f5f2f0;\n}\n\n/* Inline code */\n:not(pre) > code[class*="language-"] {\n\tpadding: .1em;\n\tborder-radius: .3em;\n\twhite-space: normal;\n}\n\n.token.comment,\n.token.prolog,\n.token.doctype,\n.token.cdata {\n\tcolor: slategray;\n}\n\n.token.punctuation {\n\tcolor: #999;\n}\n\n.token.namespace {\n\topacity: .7;\n}\n\n.token.property,\n.token.tag,\n.token.boolean,\n.token.number,\n.token.varant,\n.token.symbol,\n.token.deleted {\n\tcolor: #905;\n}\n\n.token.selector,\n.token.attr-name,\n.token.string,\n.token.char,\n.token.builtin,\n.token.inserted {\n\tcolor: #690;\n}\n\n.token.operator,\n.token.entity,\n.token.url,\n.language-css .token.string,\n.style .token.string {\n\tcolor: #9a6e3a;\n\tbackground: hsla(0, 0%, 100%, .5);\n}\n\n.token.atrule,\n.token.attr-value,\n.token.keyword {\n\tcolor: #07a;\n}\n\n.token.function,\n.token.class-name {\n\tcolor: #DD4A68;\n}\n\n.token.regex,\n.token.important,\n.token.variable {\n\tcolor: #e90;\n}\n\n.token.important,\n.token.bold {\n\tfont-weight: bold;\n}\n.token.italic {\n\tfont-style: italic;\n}\n\n.token.entity {\n\tcursor: help;\n}\n';
 
   // Copyright 2018 The Distill Template Authors
 
-  const T$4 = Template(
+  var T$4 = Template(
     "d-code",
     `
 <style>
@@ -4220,28 +4220,28 @@ ${css}
       this.languageName = this.getAttribute("language");
       if (!this.languageName) {
         console.warn(
-          'You need to provide a language attribute to your <d-code> block to let us know how to highlight your code; e.g.:\n <d-code language="python">zeros = np.zeros(shape)</d-code>.'
+          'You need to provide a language attribute to your <d-code> block to var us know how to highlight your code; e.g.:\n <d-code language="python">zeros = np.zeros(shape)</d-code>.'
         );
         return;
       }
-      const language = prism.languages[this.languageName];
+      var language = prism.languages[this.languageName];
       if (language == undefined) {
         console.warn(`Distill does not yet support highlighting your code block in "${this.languageName}'.`);
         return;
       }
 
-      let content = this.textContent;
-      const codeTag = this.shadowRoot.querySelector("#code-container");
+      var content = this.textContent;
+      var codeTag = this.shadowRoot.querySelector("#code-container");
 
       if (this.hasAttribute("block")) {
         // normalize the tab indents
         content = content.replace(/\n/, "");
-        const tabs = content.match(/\s*/);
+        var tabs = content.match(/\s*/);
         content = content.replace(new RegExp("\n" + tabs, "g"), "\n");
         content = content.trim();
         // wrap code block in pre tag if needed
         if (codeTag.parentNode instanceof ShadowRoot) {
-          const preTag = document.createElement("pre");
+          var preTag = document.createElement("pre");
           this.shadowRoot.removeChild(codeTag);
           preTag.appendChild(codeTag);
           this.shadowRoot.appendChild(preTag);
@@ -4255,7 +4255,7 @@ ${css}
 
   // Copyright 2018 The Distill Template Authors
 
-  const T$5 = Template(
+  var T$5 = Template(
     "d-footnote",
     `
 <style>
@@ -4301,27 +4301,27 @@ span {
   );
 
   class Footnote extends T$5(HTMLElement) {
-    constructor() {
+    varructor() {
       super();
 
-      const options = {
+      var options = {
         childList: true,
         characterData: true,
         subtree: true,
       };
-      const observer = new MutationObserver(this.notify);
+      var observer = new MutationObserver(this.notify);
       observer.observe(this, options);
     }
 
     notify() {
-      const options = { detail: this, bubbles: true };
-      const event = new CustomEvent("onFootnoteChanged", options);
+      var options = { detail: this, bubbles: true };
+      var event = new CustomEvent("onFootnoteChanged", options);
       document.dispatchEvent(event);
     }
 
     connectedCallback() {
       // listen and notify about changes to slotted content
-      // const slot = this.shadowRoot.querySelector('#slot');
+      // var slot = this.shadowRoot.querySelector('#slot');
       // console.warn(slot.textContent);
       // slot.addEventListener('slotchange', this.notify);
       this.hoverBox = this.root.querySelector("d-hover-box");
@@ -4330,15 +4330,15 @@ span {
       });
       // create numeric ID
       Footnote.currentFootnoteId += 1;
-      const IdString = Footnote.currentFootnoteId.toString();
+      var IdString = Footnote.currentFootnoteId.toString();
       this.root.host.id = "d-footnote-" + IdString;
 
       // set up hidden hover box
-      const id = "dt-fn-hover-box-" + IdString;
+      var id = "dt-fn-hover-box-" + IdString;
       this.hoverBox.id = id;
 
       // set up visible footnote marker
-      const span = this.root.querySelector("#fn-");
+      var span = this.root.querySelector("#fn-");
       span.setAttribute("id", "fn-" + IdString);
       span.setAttribute("data-hover-ref", id);
       span.textContent = IdString;
@@ -4349,7 +4349,7 @@ span {
 
   // Copyright 2018 The Distill Template Authors
 
-  const T$6 = Template(
+  var T$6 = Template(
     "d-footnote-list",
     `
 <style>
@@ -4395,13 +4395,13 @@ d-footnote-list a.footnote-backlink {
         // ensure footnote list is visible
         this.root.style.display = "";
 
-        for (const footnote of footnotes) {
-          // construct and append list item to show footnote
-          const listItem = document.createElement("li");
+        for (var footnote of footnotes) {
+          // varruct and append list item to show footnote
+          var listItem = document.createElement("li");
           listItem.id = footnote.id + "-listing";
           listItem.innerHTML = footnote.innerHTML;
 
-          const backlink = document.createElement("a");
+          var backlink = document.createElement("a");
           backlink.setAttribute("class", "footnote-backlink");
           backlink.textContent = "[↩]";
           backlink.href = "#" + footnote.id;
@@ -4418,7 +4418,7 @@ d-footnote-list a.footnote-backlink {
 
   // Copyright 2018 The Distill Template Authors
 
-  const T$7 = Template(
+  var T$7 = Template(
     "d-hover-box",
     `
 <style>
@@ -4467,7 +4467,7 @@ d-footnote-list a.footnote-backlink {
   );
 
   class HoverBox extends T$7(HTMLElement) {
-    constructor() {
+    varructor() {
       super();
     }
 
@@ -4543,7 +4543,7 @@ d-footnote-list a.footnote-backlink {
 
     showAtNode(node) {
       // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
-      const bbox = node.getBoundingClientRect();
+      var bbox = node.getBoundingClientRect();
       this.show([node.offsetLeft + bbox.width, node.offsetTop + bbox.height]);
     }
 
@@ -4589,7 +4589,7 @@ d-footnote-list a.footnote-backlink {
 
   // Copyright 2018 The Distill Template Authors
 
-  const T$8 = Template(
+  var T$8 = Template(
     "d-references",
     `
 <style>
@@ -4625,8 +4625,8 @@ d-references {
     connectedCallback() {
       if (!this.getAttribute("prerendered")) {
         window.onload = () => {
-          const article = document.querySelector("d-article");
-          const headings = article.querySelectorAll("h2, h3");
+          var article = document.querySelector("d-article");
+          var headings = article.querySelectorAll("h2, h3");
           renderTOC(this, headings);
         };
       }
@@ -4634,7 +4634,7 @@ d-references {
   }
 
   function renderTOC(element, headings) {
-    let ToC = `
+    var ToC = `
   <style>
 
   d-toc {
@@ -4660,16 +4660,16 @@ d-references {
   <h2>Table of contents</h2>
   <ul>`;
 
-    for (const el of headings) {
+    for (var el of headings) {
       // should element be included in TOC?
-      const isInTitle = el.parentElement.tagName == "D-TITLE";
-      const isException = el.getAttribute("no-toc");
+      var isInTitle = el.parentElement.tagName == "D-TITLE";
+      var isException = el.getAttribute("no-toc");
       if (isInTitle || isException) continue;
       // create TOC entry
-      const title = el.textContent;
-      const link = "#" + el.getAttribute("id");
+      var title = el.textContent;
+      var link = "#" + el.getAttribute("id");
 
-      let newLine = "<li>" + '<a href="' + link + '">' + title + "</a>" + "</li>";
+      var newLine = "<li>" + '<a href="' + link + '">' + title + "</a>" + "</li>";
       if (el.tagName == "H3") {
         newLine = "<ul>" + newLine + "</ul>";
       } else {
@@ -4734,7 +4734,7 @@ d-references {
       // console.log("Checking to run readyQueue, length: " + Figure.readyQueue.length + ", scrolling: " + Figure.isScrolling);
       // if (Figure.isScrolling) return;
       // console.log("Running ready Queue");
-      const figure = Figure.readyQueue
+      var figure = Figure.readyQueue
         .sort((a, b) => a._seenOnScreen - b._seenOnScreen)
         .filter((figure) => !figure._ready)
         .pop();
@@ -4744,7 +4744,7 @@ d-references {
       }
     }
 
-    constructor() {
+    varructor() {
       super();
       // debugger
       this._ready = false;
@@ -4772,22 +4772,22 @@ d-references {
         // if (!('IntersectionObserver' in window)) {
         //   throw new Error('no interscetionobbserver!');
         // }
-        const viewportHeight = window.innerHeight;
-        const margin = Math.floor(2 * viewportHeight);
-        const options = {
+        var viewportHeight = window.innerHeight;
+        var margin = Math.floor(2 * viewportHeight);
+        var options = {
           rootMargin: margin + "px 0px " + margin + "px 0px",
           threshold: 0.01,
         };
-        const callback = Figure.didObserveMarginIntersection;
-        const observer = new IntersectionObserver(callback, options);
+        var callback = Figure.didObserveMarginIntersection;
+        var observer = new IntersectionObserver(callback, options);
         Figure._marginObserver = observer;
       }
       return Figure._marginObserver;
     }
 
     static didObserveMarginIntersection(entries) {
-      for (const entry of entries) {
-        const figure = entry.target;
+      for (var entry of entries) {
+        var figure = entry.target;
         if (entry.isIntersecting && !figure._ready) {
           Figure.addToReadyQueue(figure);
         }
@@ -4805,8 +4805,8 @@ d-references {
     }
 
     static didObserveDirectIntersection(entries) {
-      for (const entry of entries) {
-        const figure = entry.target;
+      for (var entry of entries) {
+        var figure = entry.target;
         if (entry.isIntersecting) {
           figure._seenOnScreen = new Date();
           // if (!figure._ready) { figure.ready(); }
@@ -4844,29 +4844,29 @@ d-references {
       // debugger
       this._ready = true;
       Figure.marginObserver.unobserve(this);
-      const event = new CustomEvent("ready");
+      var event = new CustomEvent("ready");
       this.dispatchEvent(event);
     }
 
     onscreen() {
       this._onscreen = true;
       this._offscreen = false;
-      const event = new CustomEvent("onscreen");
+      var event = new CustomEvent("onscreen");
       this.dispatchEvent(event);
     }
 
     offscreen() {
       this._onscreen = false;
       this._offscreen = true;
-      const event = new CustomEvent("offscreen");
+      var event = new CustomEvent("offscreen");
       this.dispatchEvent(event);
     }
   }
 
   if (typeof window !== "undefined") {
     Figure.isScrolling = false;
-    let timeout;
-    const resetTimer = () => {
+    var timeout;
+    var resetTimer = () => {
       Figure.isScrolling = true;
       clearTimeout(timeout);
       timeout = setTimeout(() => {
@@ -4882,8 +4882,8 @@ d-references {
   // This overlay is not secure.
   // It is only meant as a social deterrent.
 
-  const productionHostname = "distill.pub";
-  const T$9 = Template(
+  var productionHostname = "distill.pub";
+  var T$9 = Template(
     "d-interstitial",
     `
 <style>
@@ -4994,13 +4994,13 @@ p small {
       if (this.shouldRemoveSelf()) {
         this.parentElement.removeChild(this);
       } else {
-        const passwordInput = this.root.querySelector("#interstitial-password-input");
+        var passwordInput = this.root.querySelector("#interstitial-password-input");
         passwordInput.oninput = (event) => this.passwordChanged(event);
       }
     }
 
     passwordChanged(event) {
-      const entered = event.target.value;
+      var entered = event.target.value;
       if (entered === this.password) {
         console.log("Correct password entered.");
         this.parentElement.removeChild(this);
@@ -5029,8 +5029,8 @@ p small {
     }
 
     localStorageIdentifier() {
-      const prefix = "distill-drafts";
-      const suffix = "interstitial-password-correct";
+      var prefix = "distill-drafts";
+      var suffix = "interstitial-password-correct";
       return prefix + (window ? window.location.pathname : "-") + suffix;
     }
   }
@@ -5154,9 +5154,9 @@ p small {
     return this;
   }
 
-  function define(constructor, factory, prototype) {
-    constructor.prototype = factory.prototype = prototype;
-    prototype.constructor = constructor;
+  function define(varructor, factory, prototype) {
+    varructor.prototype = factory.prototype = prototype;
+    prototype.varructor = varructor;
   }
 
   function extend(parent, definition) {
@@ -5334,7 +5334,7 @@ p small {
 
   define(Color, color, {
     copy: function (channels) {
-      return Object.assign(new this.constructor(), this, channels);
+      return Object.assign(new this.varructor(), this, channels);
     },
     displayable: function () {
       return this.rgb().displayable();
@@ -5753,7 +5753,7 @@ p small {
     })
   );
 
-  function constant(x) {
+  function varant(x) {
     return function () {
       return x;
     };
@@ -5780,13 +5780,13 @@ p small {
     return (y = +y) === 1
       ? nogamma
       : function (a, b) {
-          return b - a ? exponential(a, b, y) : constant(isNaN(a) ? b : a);
+          return b - a ? exponential(a, b, y) : varant(isNaN(a) ? b : a);
         };
   }
 
   function nogamma(a, b) {
     var d = b - a;
-    return d ? linear(a, d) : constant(isNaN(a) ? b : a);
+    return d ? linear(a, d) : varant(isNaN(a) ? b : a);
   }
 
   var rgb$1 = (function rgbGamma(y) {
@@ -5906,7 +5906,7 @@ p small {
       bm, // current match in b
       bs, // string preceding current number in b, if any
       i = -1, // index in s
-      s = [], // string constants and placeholders
+      s = [], // string varants and placeholders
       q = []; // number interpolators
 
     // Coerce inputs to strings.
@@ -5956,7 +5956,7 @@ p small {
     var t = typeof b,
       c;
     return b == null || t === "boolean"
-      ? constant(b)
+      ? varant(b)
       : (t === "number"
           ? interpolateNumber
           : t === "string"
@@ -5986,7 +5986,7 @@ p small {
     );
   }
 
-  function constant$1(x) {
+  function varant$1(x) {
     return function () {
       return x;
     };
@@ -6007,7 +6007,7 @@ p small {
       ? function (x) {
           return (x - a) / b;
         }
-      : constant$1(isNaN(b) ? NaN : 0.5);
+      : varant$1(isNaN(b) ? NaN : 0.5);
   }
 
   function clamper(a, b) {
@@ -6415,7 +6415,7 @@ p small {
         // If the fill character is "0", grouping is applied after padding.
         if (comma && zero) (value = group(padding + value, padding.length ? width - valueSuffix.length : Infinity)), (padding = "");
 
-        // Reconstruct the final output based on the desired alignment.
+        // Revarruct the final output based on the desired alignment.
         switch (align) {
           case "<":
             value = valuePrefix + value + valueSuffix + padding;
@@ -7682,7 +7682,7 @@ p small {
   }
 
   Dispatch.prototype = dispatch.prototype = {
-    constructor: Dispatch,
+    varructor: Dispatch,
     on: function (typename, callback) {
       var _ = this._,
         T = parseTypenames(typename + "", _),
@@ -7867,7 +7867,7 @@ p small {
   }
 
   EnterNode.prototype = {
-    constructor: EnterNode,
+    varructor: EnterNode,
     appendChild: function (child) {
       return this._parent.insertBefore(child, this._next);
     },
@@ -7882,7 +7882,7 @@ p small {
     },
   };
 
-  function constant$2(x) {
+  function varant$2(x) {
     return function () {
       return x;
     };
@@ -7973,7 +7973,7 @@ p small {
       parents = this._parents,
       groups = this._groups;
 
-    if (typeof value !== "function") value = constant$2(value);
+    if (typeof value !== "function") value = varant$2(value);
 
     for (var m = groups.length, update = new Array(m), enter = new Array(m), exit = new Array(m), j = 0; j < m; ++j) {
       var parent = parents[j],
@@ -8143,13 +8143,13 @@ p small {
     };
   }
 
-  function attrConstant(name, value) {
+  function attrvarant(name, value) {
     return function () {
       this.setAttribute(name, value);
     };
   }
 
-  function attrConstantNS(fullname, value) {
+  function attrvarantNS(fullname, value) {
     return function () {
       this.setAttributeNS(fullname.space, fullname.local, value);
     };
@@ -8189,8 +8189,8 @@ p small {
             ? attrFunctionNS
             : attrFunction
           : fullname.local
-            ? attrConstantNS
-            : attrConstant)(fullname, value)
+            ? attrvarantNS
+            : attrvarant)(fullname, value)
     );
   }
 
@@ -8208,7 +8208,7 @@ p small {
     };
   }
 
-  function styleConstant(name, value, priority) {
+  function stylevarant(name, value, priority) {
     return function () {
       this.style.setProperty(name, value, priority);
     };
@@ -8225,7 +8225,7 @@ p small {
   function selection_style(name, value, priority) {
     return arguments.length > 1
       ? this.each(
-          (value == null ? styleRemove : typeof value === "function" ? styleFunction : styleConstant)(name, value, priority == null ? "" : priority)
+          (value == null ? styleRemove : typeof value === "function" ? styleFunction : stylevarant)(name, value, priority == null ? "" : priority)
         )
       : styleValue(this.node(), name);
   }
@@ -8240,7 +8240,7 @@ p small {
     };
   }
 
-  function propertyConstant(name, value) {
+  function propertyvarant(name, value) {
     return function () {
       this[name] = value;
     };
@@ -8256,7 +8256,7 @@ p small {
 
   function selection_property(name, value) {
     return arguments.length > 1
-      ? this.each((value == null ? propertyRemove : typeof value === "function" ? propertyFunction : propertyConstant)(name, value))
+      ? this.each((value == null ? propertyRemove : typeof value === "function" ? propertyFunction : propertyvarant)(name, value))
       : this.node()[name];
   }
 
@@ -8343,7 +8343,7 @@ p small {
     this.textContent = "";
   }
 
-  function textConstant(value) {
+  function textvarant(value) {
     return function () {
       this.textContent = value;
     };
@@ -8358,7 +8358,7 @@ p small {
 
   function selection_text(value) {
     return arguments.length
-      ? this.each(value == null ? textRemove : (typeof value === "function" ? textFunction : textConstant)(value))
+      ? this.each(value == null ? textRemove : (typeof value === "function" ? textFunction : textvarant)(value))
       : this.node().textContent;
   }
 
@@ -8366,7 +8366,7 @@ p small {
     this.innerHTML = "";
   }
 
-  function htmlConstant(value) {
+  function htmlvarant(value) {
     return function () {
       this.innerHTML = value;
     };
@@ -8381,7 +8381,7 @@ p small {
 
   function selection_html(value) {
     return arguments.length
-      ? this.each(value == null ? htmlRemove : (typeof value === "function" ? htmlFunction : htmlConstant)(value))
+      ? this.each(value == null ? htmlRemove : (typeof value === "function" ? htmlFunction : htmlvarant)(value))
       : this.node().innerHTML;
   }
 
@@ -8408,13 +8408,13 @@ p small {
     });
   }
 
-  function constantNull() {
+  function varantNull() {
     return null;
   }
 
   function selection_insert(name, before) {
     var create = typeof name === "function" ? name : creator(name),
-      select = before == null ? constantNull : typeof before === "function" ? before : selector(before);
+      select = before == null ? varantNull : typeof before === "function" ? before : selector(before);
     return this.select(function () {
       return this.insertBefore(create.apply(this, arguments), select.apply(this, arguments) || null);
     });
@@ -8589,7 +8589,7 @@ p small {
     node.dispatchEvent(event);
   }
 
-  function dispatchConstant(type, params) {
+  function dispatchvarant(type, params) {
     return function () {
       return dispatchEvent(this, type, params);
     };
@@ -8602,7 +8602,7 @@ p small {
   }
 
   function selection_dispatch(type, params) {
-    return this.each((typeof params === "function" ? dispatchFunction : dispatchConstant)(type, params));
+    return this.each((typeof params === "function" ? dispatchFunction : dispatchvarant)(type, params));
   }
 
   var root = [null];
@@ -8617,7 +8617,7 @@ p small {
   }
 
   Selection.prototype = selection.prototype = {
-    constructor: Selection,
+    varructor: Selection,
     select: selection_select,
     selectAll: selection_selectAll,
     filter: selection_filter,
@@ -8733,7 +8733,7 @@ p small {
     }
   }
 
-  function constant$3(x) {
+  function varant$3(x) {
     return function () {
       return x;
     };
@@ -8917,19 +8917,19 @@ p small {
     }
 
     drag.filter = function (_) {
-      return arguments.length ? ((filter = typeof _ === "function" ? _ : constant$3(!!_)), drag) : filter;
+      return arguments.length ? ((filter = typeof _ === "function" ? _ : varant$3(!!_)), drag) : filter;
     };
 
     drag.container = function (_) {
-      return arguments.length ? ((container = typeof _ === "function" ? _ : constant$3(_)), drag) : container;
+      return arguments.length ? ((container = typeof _ === "function" ? _ : varant$3(_)), drag) : container;
     };
 
     drag.subject = function (_) {
-      return arguments.length ? ((subject = typeof _ === "function" ? _ : constant$3(_)), drag) : subject;
+      return arguments.length ? ((subject = typeof _ === "function" ? _ : varant$3(_)), drag) : subject;
     };
 
     drag.touchable = function (_) {
-      return arguments.length ? ((touchable = typeof _ === "function" ? _ : constant$3(!!_)), drag) : touchable;
+      return arguments.length ? ((touchable = typeof _ === "function" ? _ : varant$3(!!_)), drag) : touchable;
     };
 
     drag.on = function () {
@@ -8946,7 +8946,7 @@ p small {
 
   // Copyright 2018 The Distill Template Authors
 
-  const T$a = Template(
+  var T$a = Template(
     "d-slider",
     `
 <style>
@@ -9050,7 +9050,7 @@ p small {
   // If the slider has a visible label, it is referenced by aria-labelledby on the slider element. Otherwise, the slider element has a label provided by aria-label.
   // If the slider is vertically oriented, it has aria-orientation set to vertical. The default value of aria-orientation for a slider is horizontal.
 
-  const keyCodes = {
+  var keyCodes = {
     left: 37,
     up: 38,
     right: 39,
@@ -9155,7 +9155,7 @@ p small {
 
     onKeyDown(event) {
       this.changeValue = this.value;
-      let stopPropagation = false;
+      var stopPropagation = false;
       switch (event.keyCode) {
         case keyCodes.left:
         case keyCodes.down:
@@ -9202,14 +9202,14 @@ p small {
     }
 
     dragUpdate() {
-      const bbox = this.background.getBoundingClientRect();
-      const x = event.x;
-      const width = bbox.width;
+      var bbox = this.background.getBoundingClientRect();
+      var x = event.x;
+      var width = bbox.width;
       this.update(this.scale.invert(x / width));
     }
 
     update(value) {
-      let v = value;
+      var v = value;
       if (this.step !== "any") {
         v = this.quantizeValue(value, this.step);
       }
@@ -9228,20 +9228,20 @@ p small {
 
     // Dispatches only on a committed change (basically only on mouseup).
     dispatchChange() {
-      const e = new Event("change");
+      var e = new Event("change");
       this.dispatchEvent(e, {});
     }
 
     // Dispatches on each value change.
     dispatchInput() {
-      const e = new Event("input");
+      var e = new Event("input");
       this.dispatchEvent(e, {});
     }
 
     renderTicks() {
-      const ticksContainer = this.root.querySelector(".ticks");
+      var ticksContainer = this.root.querySelector(".ticks");
       if (this.ticks !== false) {
-        let tickData = [];
+        var tickData = [];
         if (this.ticks > 0) {
           tickData = this.scale.ticks(this.ticks);
         } else if (this.step === "any") {
@@ -9250,7 +9250,7 @@ p small {
           tickData = range(this.min, this.max + 1e-6, this.step);
         }
         tickData.forEach((d) => {
-          const tick = document.createElement("div");
+          var tick = document.createElement("div");
           tick.classList.add("tick");
           tick.style.left = this.scale(d) * 100 + "%";
           ticksContainer.appendChild(tick);
@@ -9264,7 +9264,7 @@ p small {
   var logo =
     '<svg viewBox="-607 419 64 64">\n  <path d="M-573.4,478.9c-8,0-14.6-6.4-14.6-14.5s14.6-25.9,14.6-40.8c0,14.9,14.6,32.8,14.6,40.8S-565.4,478.9-573.4,478.9z"/>\n</svg>\n';
 
-  const headerTemplate = `
+  var headerTemplate = `
 <style>
 distill-header {
   position: relative;
@@ -9344,13 +9344,13 @@ distill-header .nav a {
 
   // Copyright 2018 The Distill Template Authors
 
-  const T$b = Template("distill-header", headerTemplate, false);
+  var T$b = Template("distill-header", headerTemplate, false);
 
   class DistillHeader extends T$b(HTMLElement) {}
 
   // Copyright 2018 The Distill Template Authors
 
-  const styles$2 = `
+  var styles$2 = `
 <style>
   distill-appendix {
     contain: layout style;
@@ -9379,7 +9379,7 @@ distill-header .nav a {
 `;
 
   function appendixTemplate(frontMatter) {
-    let html = styles$2;
+    var html = styles$2;
 
     if (typeof frontMatter.githubUrl !== "undefined") {
       html += `
@@ -9393,7 +9393,7 @@ distill-header .nav a {
     `;
     }
 
-    const journal = frontMatter.journal;
+    var journal = frontMatter.journal;
     if (typeof journal !== "undefined" && journal.title === "Distill") {
       html += `
     <h3 id="reuse">Reuse</h3>
@@ -9424,7 +9424,7 @@ distill-header .nav a {
     }
   }
 
-  const footerTemplate = `
+  var footerTemplate = `
 <style>
 
 :host {
@@ -9499,15 +9499,15 @@ distill-header .nav a {
 
   // Copyright 2018 The Distill Template Authors
 
-  const T$c = Template("distill-footer", footerTemplate);
+  var T$c = Template("distill-footer", footerTemplate);
 
   class DistillFooter extends T$c(HTMLElement) {}
 
   // Copyright 2018 The Distill Template Authors
 
-  let templateIsLoading = false;
-  let runlevel = 0;
-  const initialize = function () {
+  var templateIsLoading = false;
+  var runlevel = 0;
+  var initialize = function () {
     if (window.distill.runlevel < 1) {
       throw new Error("Insufficient Runlevel for Distill Template!");
     }
@@ -9528,7 +9528,7 @@ distill-header .nav a {
 
     /* 3. Register Controller listener functions */
     /* Needs to happen before components to their connected callbacks have a controller to talk to. */
-    for (const [functionName, callback] of Object.entries(Controller.listeners)) {
+    for (var [functionName, callback] of Object.entries(Controller.listeners)) {
       if (typeof callback === "function") {
         document.addEventListener(functionName, callback);
       } else {
@@ -9540,7 +9540,7 @@ distill-header .nav a {
     window.distill.runlevel += 1;
 
     /* 4. Register components */
-    const components = [
+    var components = [
       Abstract,
       Appendix,
       Article,
@@ -9562,13 +9562,13 @@ distill-header .nav a {
       Interstitial,
     ];
 
-    const distillComponents = [DistillHeader, DistillAppendix, DistillFooter];
+    var distillComponents = [DistillHeader, DistillAppendix, DistillFooter];
 
     if (window.distill.runlevel < 2) {
       throw new Error("Insufficient Runlevel for adding custom elements!");
     }
-    const allComponents = components.concat(distillComponents);
-    for (const component of allComponents) {
+    var allComponents = components.concat(distillComponents);
+    for (var component of allComponents) {
       console.debug("Runlevel 2: Registering custom element: " + component.is);
       customElements.define(component.is, component);
     }
