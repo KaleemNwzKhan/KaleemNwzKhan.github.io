@@ -178,11 +178,11 @@ giscus:
 # -----------------------------------------------------------------------------
 
 collections:
-  News:
+  news:
     defaults:
       layout: post
     output: true
-    permalink: /news/:path/
+    # permalink: /news/:path/
 #   projects:
 #     output: true
 #     permalink: /projects/:path/
