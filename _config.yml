@@ -182,6 +182,7 @@ collections:
     defaults:
       layout: post
     output: true
+    title: News
     # permalink: /news/:path/
 #   projects:
 #     output: true
