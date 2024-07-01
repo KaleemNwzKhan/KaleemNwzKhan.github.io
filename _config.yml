@@ -62,9 +62,10 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+linkedin_username: kaleemnawazkhan6161
+orcid_id: 0000-0003-3630-6418
+research_gate_profile: Kaleem-Khan-5
+scholar_userid: LmYhLTsAAAAJ # your Google Scholar ID
 
 # -----------------------------------------------------------------------------
 # Social integration
