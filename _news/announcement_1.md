@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2024-06-02
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+I will be attending MobiSys'24 in Tokyo, Japan from June 3 to 7, 2024, where I'll present our work titled 'VRF: Vehicle Roadside Point Cloud Fusion'.
