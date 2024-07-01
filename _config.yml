@@ -305,8 +305,8 @@ jekyll-minifier:
 #     harmony: true
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  # last_name: [Einstein]
+  # first_name: [Albert, A.]
 
   style: apa
   locale: en
@@ -331,9 +331,9 @@ scholar:
 
 # Display different badges withs stats for your publications
 enable_publication_badges:
-  altmetric: true # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
-  dimensions: true # Dimensions badge (https://badge.dimensions.ai/)
-  google_scholar: true # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
+  altmetric: false # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
+  dimensions: false # Dimensions badge (https://badge.dimensions.ai/)
+  google_scholar: false # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
 
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords:
@@ -371,11 +371,11 @@ enable_publication_thumbnails: false
 # -----------------------------------------------------------------------------
 
 # These are the defaults
-external_links:
-  enabled: true
-  rel: external nofollow noopener
-  target: _blank
-  exclude:
+# external_links:
+#   enabled: true
+#   rel: external nofollow noopener
+#   target: _blank
+#   exclude:
 
 # -----------------------------------------------------------------------------
 # Responsive WebP Images
