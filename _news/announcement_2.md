@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+Joined the Ketting Research Development Center at General Motors as a Research Intern.
