@@ -2,6 +2,13 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
+      <!-- Google Scholar Icon and Link -->
+      {% if page.permalink == '/' %}
+        <a class="navbar-brand" href="https://scholar.google.com/citations?user=YOUR_USER_ID" target="_blank" title="Google Scholar">
+          <i class="fab fa-google-scholar"></i>
+        </a>
+      {% endif %}
+      
       {% if page.permalink != '/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
           {% if site.title == 'blank' %}
@@ -20,6 +27,9 @@
             {{- site.title -}}
           {% endif %}
         </a>
+      {% elsif site.enable_navbar_social %}
+        <!-- Social Icons -->
+        <div class="navbar-brand social">{% include social.liquid %}</div>
       {% endif %}
 
       <!-- Navbar Toggle -->
@@ -123,13 +133,6 @@
               </button>
             </li>
           {% endif %}
-          <!-- Social Icons -->
-          <li class="nav-item">
-            <a class="nav-link" href="https://scholar.google.com/citations?user=LmYhLTsAAAAJ" target="_blank" title="Google Scholar">
-              <i class="fab fa-google-scholar"></i>
-            </a>
-          </li>
-          <!-- Additional social icons can be added here -->
         </ul>
       </div>
     </div>
