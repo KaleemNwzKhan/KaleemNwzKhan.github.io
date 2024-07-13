@@ -20,9 +20,6 @@
             {{- site.title -}}
           {% endif %}
         </a>
-      {% elsif site.enable_navbar_social %}
-        <!-- Social Icons -->
-        <div class="navbar-brand social">{% include social.liquid %}</div>
       {% endif %}
 
       <!-- Navbar Toggle -->
@@ -117,7 +114,7 @@
             </li>
           {% endif %}
           {% if site.enable_darkmode %}
-            <!-- Toogle theme mode -->
+            <!-- Toggle theme mode -->
             <li class="toggle-container">
               <button id="light-toggle" title="Change theme">
                 <i class="ti ti-sun-moon" id="light-toggle-system"></i>
@@ -126,6 +123,13 @@
               </button>
             </li>
           {% endif %}
+          <!-- Social Icons -->
+          <li class="nav-item">
+            <a class="nav-link" href="https://scholar.google.com/citations?user=LmYhLTsAAAAJ" target="_blank" title="Google Scholar">
+              <i class="fab fa-google-scholar"></i>
+            </a>
+          </li>
+          <!-- Additional social icons can be added here -->
         </ul>
       </div>
     </div>
