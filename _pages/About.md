@@ -19,3 +19,5 @@ I am a Ph.D. student, working with <a href='https://fawadahm.github.io/'> Dr. Fa
 My research focuses on networked sensing, particularly in autonomous driving. I aim to improve the perception capabilities of autonomous vehicles by leveraging vehicle-to-vehicle and roadside unit-to-vehicle cooperation. This involves the real-time sharing and precise fusion of raw 3D data. Additionally, I work on 3D reconstruction, mapping, and tracking using neural radiance field (NeRF) technology.
 
 I graduated with honors from the <a href='https://www.nu.edu.pk/'> National University of Computer and Emerging Sciences (NUCES)</a>, Pakistan, where I earned my Bachelor's degree in 2015 and Master's degree in Computer Science in 2018. From 2019 to 2021, I led a research team (AI in Healthcare) at the Intelligent Information Processing Lab within the <a href='https://ncai.pk/'>National Center for Artificial Intelligence (NCAI)</a> in Peshawar, Pakistan.
+
+Moreover you can find my resume <a href='https://drive.google.com/file/d/10pYHHchlQ7pQ1nfRuUGoYqZO0DvAy7BW/view?usp=sharing'> here. 
