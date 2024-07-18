@@ -20,4 +20,4 @@ My research focuses on networked sensing, particularly in autonomous driving. I 
 
 I graduated with honors from the <a href='https://www.nu.edu.pk/'> National University of Computer and Emerging Sciences (NUCES)</a>, Pakistan, where I earned my Bachelor's degree in 2015 and Master's degree in Computer Science in 2018. From 2019 to 2021, I led a research team (AI in Healthcare) at the Intelligent Information Processing Lab within the <a href='https://ncai.pk/'>National Center for Artificial Intelligence (NCAI)</a> in Peshawar, Pakistan.
 
-Moreover, you can find my resume <a href='https://drive.google.com/file/d/13n_QL0V25g5x_0QhChdzivt-ANLsYWcr/view?usp=sharing'> here. 
+Moreover, you can find my resume <a href='https://drive.google.com/file/d/1i5B8EB7cIx3y2hTw7rUl6FSAv1GI9tbf/view?usp=sharing'> here. 
