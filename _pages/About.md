@@ -39,6 +39,6 @@ within the <a href='https://ncai.pk/'>National Center for Artificial Intelligenc
 </p>
 
 <p>
-<strong>Resume:</strong> You can find my resume <a href='https://drive.google.com/file/d/1oLdiqMHDWLPpWPepTYSeitrYBfbE3nOF/view?usp=sharing'> here</a>.
+<strong>Resume:</strong> You can find my resume <a href='https://drive.google.com/file/d/1650ON6mZEjAdH2ISjUjpMpFhqSt7YQR5/view?usp=sharing'> here</a>.
 </p>
 
