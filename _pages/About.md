@@ -4,7 +4,7 @@ title: About
 permalink: /
 profile:
   align: right
-  image: prof_pic.jpg
+  image: KaleemNawaz.png
   image_circular: false # crops the image to make it circular
   more_info: >
     <p> Rochester, NY 14623 </p>
