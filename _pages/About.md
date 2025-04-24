@@ -17,7 +17,7 @@ social: true # includes social icons at the bottom of the page
 <p>
 I am a Ph.D. student, working with <a href='https://fawadahm.github.io/'> Dr. Fawad Ahmad</a> in the Networked Sensing Systems Lab, 
 <a href='https://www.rit.edu/computing/department-computer-science'> Department of Computer Science</a> at 
-<a href='https://www.rit.edu/'> Rochester Institute of Technology</a>, New York, USA.
+<a href='https://www.rit.edu/'> Rochester Institute of Technology</a>.
 </p>
 
 <p>
