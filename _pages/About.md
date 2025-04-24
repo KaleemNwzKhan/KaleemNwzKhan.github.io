@@ -30,7 +30,7 @@ I am a Ph.D. student, working with <a href='https://fawadahm.github.io/'> Dr. Fa
 
 <p>
 <strong>Academic Background:</strong> I graduated with honors from the 
-<a href='https://www.nu.edu.pk/'>National University of Computer and Emerging Sciences (NUCES)</a> in Pakistan, completing my Bachelor's and Master's degrees in Computer Science in 2015 and 2018, respectively. From 2019 to 2021, I served as a research team lead at the Intelligent Information Processing Lab, part of the <a href='https://ncai.pk/'>National Center for Artificial Intelligence (NCAI)</a> in Peshawar.
+<a href='https://www.nu.edu.pk/'>National University of Computer and Emerging Sciences (NUCES)</a> in Pakistan, completing my Bachelor's and Master's degrees in Computer Science in 2015 and 2018, respectively. From 2019 to 2021, I served as a research team lead at the Intelligent Information Processing Lab, part of the <a href='https://ncai.pk/'>National Center for Artificial Intelligence (NCAI)</a> in Peshawar. I also held lecturer positions at <a href='https://bahria.edu.pk/'>Bahria University Islamabad</a> and the <a href='https://www.uetmardan.edu.pk/uetm/'>University of Engineering and Technology, Mardan</a>.. 
 </p>
 
 <p>
