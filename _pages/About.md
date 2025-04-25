@@ -5,8 +5,8 @@ permalink: /
 profile:
   align: right
   image: KaleemNawaz.png
-  image_circular: true # crops the image to make it circular
-  image_size: 120px 
+  image_circular: false # crops the image to make it circular
+  image_size: 60px 
   more_info: >
     <p> 70-3500, 20 Lomb Memorial Drive, Rochester, NY 14623 </p>
 
