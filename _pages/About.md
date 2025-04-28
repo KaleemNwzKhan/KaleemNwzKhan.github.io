@@ -8,7 +8,7 @@ profile:
   image_circular: false # crops the image to make it circular
   image_size: 60px 
   more_info: >
-    <p> 70-3500, 20 Lomb Memorial Drive, Rochester, NY 14623 </p>
+    <p> 70-3400, 20 Lomb Memorial Drive, Rochester, NY 14623 </p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
