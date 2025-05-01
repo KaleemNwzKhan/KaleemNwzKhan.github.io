@@ -7,7 +7,7 @@ profile:
   image: KaleemNawaz.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p> Rochester, NY 14623 </p>
+    <p> RIT, Rochester, NY 14623 </p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
