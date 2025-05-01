@@ -3,7 +3,7 @@ layout: about
 title: About
 permalink: /
 profile:
-  align: right
+  align: left
   image: KaleemNawaz.png
   image_circular: false # crops the image to make it circular
   more_info: >
