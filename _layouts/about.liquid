@@ -25,11 +25,17 @@ layout: default
             {% assign profile_image_class = 'img-fluid z-depth-1
       rounded' %}
           {% endif %}
-          {% capture sizes %}(min-width: 768px) 100px, 80px{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes="60px" style="max-width: 60px;" alt=page.profile.image
-            cache_bust=true
-          %}
+{% capture sizes %}(min-width: 768px) 75px, 60px{% endcapture %}
+{%
+  include figure.liquid
+  loading="eager"
+  path=profile_image_path
+  class=profile_image_class
+  sizes="75px"
+  style="max-width: 75px;"
+  alt=page.profile.image
+  cache_bust=true
+%}
         {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
