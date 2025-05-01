@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-I'll be presenting one of my research projects on cooperative perception at ImagineRIT'25, hosted at RIT.
+I'll be presenting one of my research works on cooperative perception at ImagineRIT, hosted at RIT.
 
