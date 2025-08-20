@@ -30,6 +30,6 @@ I am a Ph.D. student, working with <a href='https://fawadahm.github.io/'> Dr. Fa
 </p>
 
 <p>
-<strong>Resume:</strong> You can find my resume <a href='https://drive.google.com/file/d/1650ON6mZEjAdH2ISjUjpMpFhqSt7YQR5/view?usp=sharing'> here</a>.
+<strong>Resume:</strong> You can find my resume <a href='https://drive.google.com/file/d/14XPABqrvzrHrId-3ScU0igBgC2Yn5xwl/view?usp=sharing'> here</a>.
 </p>
 
