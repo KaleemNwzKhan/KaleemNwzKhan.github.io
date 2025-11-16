@@ -26,7 +26,7 @@ I am a Ph.D. student, working with <a href='https://fawadahm.github.io/'> Dr. Fa
 </p>
 
 <p>
-<strong>Research Focus:</strong> My research centers on advancing cooperative perception in autonomous systems, with a focus on autonomous vehicles (AVs). I aim to develop accurate and scalable infrastructure-assisted and vehicle-to-vehicle cooperative perception frameworks that operate within real-time constraints. Additionally, I explore neural rendering methods, such as NeRF and 3D Gaussian Splatting, for 3D traffic scene reconstruction and novel view synthesis. With this, I aim to enhance AVs' perception capabilities beyond traditional approaches.
+<strong>Research Focus:</strong> System researcher building low-latency, scalable cooperative perception frameworks for autonomous vehicles. Enable real-time sensor fusion between vehicles and infrastructure. Expertise in LiDAR and camera perception, SLAM, ROS, CUDA, and point cloud processing. Skilled in large-scale simulation using CARLA and OMNeT++. Experience with 3D reconstruction using 3D Gaussian Splatting and NeRF-based new view synthesis.
 </p>
 
 <p>
