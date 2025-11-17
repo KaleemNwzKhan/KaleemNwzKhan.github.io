@@ -26,10 +26,6 @@ I am a Ph.D. student, working with <a href='https://fawadahm.github.io/'> Dr. Fa
 </p>
 
 <p>
-<strong>Research Focus:</strong> System researcher building low-latency, scalable cooperative perception frameworks for autonomous vehicles. Enable real-time sensor fusion between vehicles and infrastructure. Expertise in LiDAR and camera perception, SLAM, ROS, CUDA, and point cloud processing. Skilled in large-scale simulation using CARLA and OMNeT++. Experience with 3D reconstruction using 3D Gaussian Splatting and NeRF-based new view synthesis.
-</p>
-
-<p>
 <strong>CV:</strong> You can find my CV <a href="/assets/pdf/Kaleem_s_CV.pdf" target="_blank">here</a>.
 </p>
 
