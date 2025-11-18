@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our work [ARC](https://github.com/KaleemNwzKhan/ARC_2025) has been conditionally accepted at [ACM/IEEE SenSys 2026](https://sensys.acm.org/2026/).
+Our work [ARC](https://kaleemnwzkhan.github.io/assets/pdf/ARC.pdf) has been conditionally accepted at [ACM/IEEE SenSys 2026](https://sensys.acm.org/2026/).
