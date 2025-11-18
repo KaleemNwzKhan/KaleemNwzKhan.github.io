@@ -26,7 +26,7 @@ I am a Ph.D. student, working with <a href='https://fawadahm.github.io/'> Dr. Fa
 </p>
 
 <p>
-<strong>Research Focus:</strong> I am a systems researcher focused on designing real-time, scalable systems that combine data from multiple sources with high accuracy and low latency. My work enables autonomous vehicles to more robustly perceive and understand their surroundings, leading to more reliable decisions in complex environments.
+<strong>Research Focus:</strong> I am a systems researcher focused on designing real-time, scalable systems that combine data from multiple sources with high accuracy and low latency. My work enables autonomous vehicles to more robustly perceive and understand their surroundings, leading to more reliable decisions in complex environments. Experience with LiDAR and camera perception, SLAM, ROS, CUDA, and point cloud processing, as well as large-scale simulation and 3D reconstruction using Gaussian Splatting and NeRF.
 </p>
 
 <p>
