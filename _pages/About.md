@@ -30,6 +30,6 @@ I am a Ph.D. student, working with <a href='https://fawadahm.github.io/'> Dr. Fa
 </p>
 
 <p>
-<strong> CV:</strong>strong> Click <a href="/assets/pdf/Kaleem_s_CV.pdf" target="_blank">here</a> to view my full CV.
+<strong> CV:</strong> Click <a href="/assets/pdf/Kaleem_s_CV.pdf" target="_blank">here</a> to view my full CV.
 </p>
 
