@@ -1,8 +1,21 @@
+---
+layout: about
+title: About
+permalink: /
+profile:
+  align: left
+  image: KaleemNawaz.png
+  image_circular: false # crops the image to make it circular
+  more_info: >
+    <p> Rochester, NY 14623 </p>
 <h2 style="margin-bottom: 0.2em;">Kaleem Nawaz Khan</h2>
 
+news: true # includes a list of news items
+selected_papers: true # includes a list of papers marked as "selected={true}"
+social: true # includes social icons at the bottom of the page
+---
 <p style="margin-top: 0; font-style: italic; color: #555;">
 Enabling autonomous vehicles to see beyond line-of-sight in real time.
-</p>
 
 <p>
 I am a Ph.D. student in the 
