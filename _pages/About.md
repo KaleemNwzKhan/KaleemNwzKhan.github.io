@@ -18,7 +18,7 @@ social: true # includes social icons at the bottom of the page
 Enabling autonomous vehicles to see beyond line-of-sight in real time.
 
 <p>
-I am a Ph.D. student in the 
+I am a Ph.D. student (<a href="/assets/pdf/Kaleem_s_CV.pdf" target="_blank">View CV</a>) in the 
 <a href="https://www.rit.edu/computing/department-computer-science">Department of Computer Science</a> at 
 <a href="https://www.rit.edu/">Rochester Institute of Technology</a>, where I work with 
 <a href="https://fawadahm.github.io/">Dr. Fawad Ahmad</a> in the Networked Sensing Systems Lab.
@@ -38,10 +38,5 @@ Before starting my Ph.D., I was a Research Team Lead at the Intelligent Informat
 <a href="https://ncai.pk/">National Center for Artificial Intelligence (NCAI)</a> and served as a Lecturer at 
 <a href="https://bahria.edu.pk/">Bahria University Islamabad</a> and the 
 <a href="https://www.uetmardan.edu.pk/uetm/">University of Engineering and Technology, Mardan</a>.
-</p>
-
-<p>
-<strong>CV.</strong>
-<a href="/assets/pdf/Kaleem_s_CV.pdf" target="_blank">View CV (PDF)</a>
 </p>
 
