@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Honored to serve on the AEC for [MobiSys 2026](https://www.sigmobile.org/mobisys/2026/).
+Honored to serve on the AEC for [MobiSys 2026]([https://www.sigmobile.org/mobisys/2026/](https://www.sigmobile.org/mobisys/2026/artifact_evaluation_committee/)).
