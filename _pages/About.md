@@ -15,7 +15,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 <p style="margin-top: 0; font-style: italic; color: #555;">
-Enabling autonomous vehicles to see beyond line-of-sight in real time.
+Enabling autonomous vehicles to see beyond line-of-sight.
 
 <p>
 I am a Ph.D. candidate (<a href="/assets/pdf/Kaleem_s_CV.pdf" target="_blank">View CV</a>) in the 
