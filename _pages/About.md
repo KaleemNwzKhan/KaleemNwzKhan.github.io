@@ -4,7 +4,7 @@ title: About
 permalink: /
 profile:
   align: left
-  image: New.jpg
+  image: Kaleem_LiDAR.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p> Rochester, NY 14623 </p>
