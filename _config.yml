@@ -344,16 +344,10 @@ filtered_bibtex_keywords:
     award_name,
     bibtex_show,
     blog,
-    code,
-    html,
-    pdf,
     poster,
     preview,
     selected,
-    slides,
     supp,
-    video,
-    website,
   ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
