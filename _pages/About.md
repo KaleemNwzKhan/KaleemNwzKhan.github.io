@@ -19,9 +19,9 @@ Enabling autonomous vehicles to perceive beyond line-of-sight accurately.
 
 <p>
 I am a Ph.D. candidate (<a href="/assets/pdf/Kaleem_s_CV.pdf" target="_blank">View CV</a>) in the 
-<a href="https://www.rit.edu/computing/department-computer-science">Department of Computer Science</a> at 
+<a href="https://www.rit.edu/computing/department-computer-science">CS Department</a> at 
 <a href="https://www.rit.edu/">Rochester Institute of Technology</a>, where I work with 
-<a href="https://fawadahm.github.io/">Dr. Fawad Ahmad</a> in the Networked Sensing Systems Lab.
+<a href="https://fawadahm.github.io/">Fawad Ahmad</a> in the Networked Sensing Systems Lab.
 </p>
 
 <p>
