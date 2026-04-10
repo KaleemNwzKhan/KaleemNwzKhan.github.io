@@ -29,9 +29,9 @@ I am a Ph.D. candidate (<a href="/assets/pdf/Kaleem_s_CV.pdf" target="_blank">Vi
 </p>
 
 <p>
-<strong>Background.</strong> I received my B.S. (2015) and M.S. (2018) degrees in Computer Science with honors from the 
-<a href="https://www.nu.edu.pk/">National University of Computer and Emerging Sciences (NUCES)</a>, Pakistan. 
-Before starting my Ph.D., I was a Research Team Lead at the Intelligent Information Processing Lab under the 
+<strong>Background.</strong> I received B.S. (2015) and M.S. (2018) degrees in CS with honors from the 
+<a href="https://www.nu.edu.pk/"> NUCES </a>, Pakistan. 
+Before starting Ph.D., I was a Research Team Lead at the Intelligent Information Processing Lab under the 
 <a href="https://ncai.pk/">National Center for Artificial Intelligence (NCAI)</a> and served as a Lecturer at 
 <a href="https://bahria.edu.pk/">Bahria University Islamabad</a> and the 
 <a href="https://www.uetmardan.edu.pk/uetm/">University of Engineering and Technology, Mardan</a>.
