@@ -25,10 +25,7 @@ I am a Ph.D. candidate (<a href="/assets/pdf/Kaleem_s_CV.pdf" target="_blank">Vi
 </p>
 
 <p>
-<strong>Research.</strong> I work on real-time and scalable cooperative perception systems for autonomous driving. 
-My research studies how vehicles and roadside infrastructure can collaboratively perceive complex environments beyond line-of-sight under strict latency, accuracy, and scalability constraints. 
-A central theme of my work is the system-level co-design of perception, communication, and computation to enable reliable and safety-critical autonomous decision-making. 
-My work has appeared in top mobile and sensing systems venues, including <em>MobiSys</em> and <em>SenSys</em>.
+<strong>Research.</strong> My research focuses on collaborative perception between vehicles and roadside infrastructure. It enables sensing beyond line-of-sight. I study the co-design of perception, communication, and computation. The goal is reliable and safe autonomous decision-making. My work has appeared in top mobile and sensing systems venues, including <em>MobiSys</em> and <em>SenSys</em>.
 </p>
 
 <p>
