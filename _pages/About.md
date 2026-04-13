@@ -14,7 +14,7 @@ news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-<p style="margin-top: 0; font-style: italic; color: #ffffff;">
+<p style="margin-top: 0; font-style: italic; color: currentColor;">
 Enabling autonomous vehicles to accurately perceive beyond line-of-sight.
 
 <p>
