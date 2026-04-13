@@ -14,14 +14,11 @@ news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-<p style="margin-top: 0; font-style: italic; color: #555;">
-Enabling autonomous vehicles to perceive beyond line-of-sight accurately.
+<p style="margin-top: 0; font-style: italic; color: #ffffff;">
+Enabling autonomous vehicles to accurately perceive beyond line-of-sight.
 
 <p>
-I am a Ph.D. candidate (<a href="/assets/pdf/Kaleem_s_CV.pdf" target="_blank">View CV</a>) in the 
-<a href="https://www.rit.edu/computing/department-computer-science">CS Department</a> at 
-<a href="https://www.rit.edu/">Rochester Institute of Technology</a>, where I work with 
-<a href="https://fawadahm.github.io/">Fawad Ahmad</a> in the Networked Sensing Systems Lab.
+I am a Ph.D. <del>student</del> candidate (<a href="/assets/pdf/Kaleem_s_CV.pdf" target="_blank">View CV</a>) in the <a href="https://www.rit.edu/computing/department-computer-science">CS Department</a> at <a href="https://www.rit.edu/">Rochester Institute of Technology</a>, where I work with <a href="https://fawadahm.github.io/">Fawad Ahmad</a> in the Networked Sensing Systems Lab.
 </p>
 
 <p>
