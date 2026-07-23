@@ -33,4 +33,10 @@ Before starting Ph.D., I was a Research Team Lead at the Intelligent Information
 <a href="https://bahria.edu.pk/">Bahria University Islamabad</a> and the 
 <a href="https://www.uetmardan.edu.pk/uetm/">University of Engineering and Technology, Mardan</a>.
 </p>
-
+<div class="text-center" style="margin-top: 3rem;">
+  <script
+    type="text/javascript"
+    id="mapmyvisitors"
+    src="//mapmyvisitors.com/map.js?d=r_cMMykDPAdqK2GTahWbR__mtnzcj9svUgejZ86OXnU&cl=ffffff&w=a">
+  </script>
+</div>
