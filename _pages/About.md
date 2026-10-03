@@ -22,7 +22,7 @@ I am a Ph.D. <del>student</del> candidate (<a href="/assets/pdf/Kaleem_s_CV.pdf"
 </p>
 
 <p>
-<strong>Research.</strong> My research focuses on collaborative perception between vehicles and roadside infrastructure. It enables sensing beyond line-of-sight. I study the co-design of perception, communication, and computation. The goal is reliable and safe autonomous decision-making. My work has appeared in top mobile and sensing systems venues, including <em>MobiSys</em> and <em>SenSys</em>.
+<strong>Research.</strong> My research focuses on perception for autonomous mobile systems. I specialize in cooperative perception, multi-sensor fusion, localization, and 3D scene representation. My work combines sensing and computing across vehicles and infrastructure to improve the accuracy and coverage of environmental perception. My research enables vehicles to share information, overcome sensing limitations, and build richer representations of dynamic environments. My work has appeared in top mobile and sensing systems venues, including <em>MobiSys</em> and <em>SenSys</em>.
 </p>
 
 <p>
