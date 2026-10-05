@@ -18,7 +18,7 @@ social: true # includes social icons at the bottom of the page
 Enabling autonomous vehicles to accurately perceive beyond line-of-sight.
 
 <p>
-I am a Ph.D. <del>student</del> candidate (<a href="/assets/pdf/Kaleem_s_CV.pdf" target="_blank">View CV</a>) in the <a href="https://www.rit.edu/computing/department-computer-science">CS Department</a> at <a href="https://www.rit.edu/">Rochester Institute of Technology</a>, where I work with <a href="https://fawadahm.github.io/">Fawad Ahmad</a> in the Networked Sensing Systems Lab.
+I am a Ph.D. <del>student</del> candidate (<a href="/assets/pdf/Industry_CV.pdf" target="_blank">View CV</a>) in the <a href="https://www.rit.edu/computing/department-computer-science">CS Department</a> at <a href="https://www.rit.edu/">Rochester Institute of Technology</a>, where I work with <a href="https://fawadahm.github.io/">Fawad Ahmad</a> in the Networked Sensing Systems Lab.
 </p>
 
 <p>
